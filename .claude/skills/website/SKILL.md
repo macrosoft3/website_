@@ -33,7 +33,7 @@ This skill teaches the core development patterns and conventions used in the `we
 ### Commit Messages
 - Freeform style, no strict prefix required.
 - Average length: ~25 characters.
-  - Example:  
+  - Example:
     ```
     fix login redirect bug
     add user profile endpoint
