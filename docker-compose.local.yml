@@ -1,7 +1,7 @@
 volumes:
   ether_local_postgres_data: {}
   ether_local_postgres_data_backups: {}
-  
+
 
 services:
   django:
