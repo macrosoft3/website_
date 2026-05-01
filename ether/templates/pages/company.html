@@ -7,38 +7,46 @@
   page-company
 {% endblock bodyclass %}
 {% block content %}
-  <section class="page-hero compact-hero">
-    <div class="container">
-      <h1>会社概要</h1>
+  <section class="page-hero compact-hero" aria-labelledby="company-page-heading">
+    <div class="container" data-reveal>
+      <p class="eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Company</span>
+      </p>
+      <h1 id="company-page-heading">会社概要</h1>
       <p>公開情報として必要な会社基本情報を掲載しています。</p>
     </div>
   </section>
-  <section class="section">
-    <div class="container company-panel">
+  <section class="section" aria-label="会社情報">
+    <div class="container company-panel" data-reveal>
       <dl class="company-list">
         <div>
-          <dt>商号</dt>
-          <dd>
-            Ether合同会社
-          </dd>
+          <dt>
+            <span class="material-symbols-rounded" aria-hidden="true">domain</span>
+            商号
+          </dt>
+          <dd>Ether合同会社</dd>
         </div>
         <div>
-          <dt>本店所在地</dt>
-          <dd>
-            東京都新宿区
-          </dd>
+          <dt>
+            <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+            本店所在地
+          </dt>
+          <dd>東京都新宿区</dd>
         </div>
         <div>
-          <dt>公告の方法</dt>
-          <dd>
-            官報に掲載
-          </dd>
+          <dt>
+            <span class="material-symbols-rounded" aria-hidden="true">campaign</span>
+            公告の方法
+          </dt>
+          <dd>官報に掲載</dd>
         </div>
         <div>
-          <dt>事業年度</dt>
-          <dd>
-            毎年4月1日から翌年3月31日まで
-          </dd>
+          <dt>
+            <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+            事業年度
+          </dt>
+          <dd>毎年4月1日から翌年3月31日まで</dd>
         </div>
       </dl>
     </div>

@@ -7,20 +7,60 @@
   page-contact
 {% endblock bodyclass %}
 {% block content %}
-  <section class="page-hero compact-hero">
-    <div class="container">
-      <h1>お問い合わせ</h1>
-      <p>協業、企画相談、事業に関するご連絡はメールでお送りください。</p>
+  <section class="page-hero compact-hero" aria-labelledby="contact-page-heading">
+    <div class="container" data-reveal>
+      <p class="eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Contact</span>
+      </p>
+      <h1 id="contact-page-heading">お問い合わせ</h1>
+      <p>協業、企画相談、事業に関するご連絡はメールでお送りください。内容を拝見のうえ、担当より折り返しご連絡いたします。</p>
     </div>
   </section>
-  <section class="section">
-    <div class="container contact-panel">
-      <div>
-        <p class="section-label">Email</p>
-        <h2>info@ether.local</h2>
-        <p>本番ドメインと正式なメールアドレスは公開前に差し替える前提です。現在は初期構築用の仮連絡先を表示しています。</p>
+  <section class="section" aria-label="連絡先">
+    <div class="container">
+      <div class="contact-panel" data-reveal>
+        <div>
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Email</span>
+          </p>
+          <h2 class="headline">info@ether.local</h2>
+          <p>
+            本番ドメインと正式なメールアドレスは公開前に差し替える前提です。現在は初期構築用の仮連絡先を表示しています。
+          </p>
+        </div>
+        <div class="callout-actions">
+          <a class="btn btn-outline-light" href="mailto:info@ether.local">
+            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+            <span>メールを作成する</span>
+          </a>
+        </div>
       </div>
-      <a class="btn btn-primary" href="mailto:info@ether.local">メールを作成する</a>
+      <div class="contact-channels" aria-label="その他のチャネル">
+        <article class="contact-channel" data-reveal>
+          <span class="channel-icon" aria-hidden="true">
+            <span class="material-symbols-rounded">handshake</span>
+          </span>
+          <h3>協業・パートナーシップ</h3>
+          <p>音楽・イベント・ソフトウェア・Web3 領域における協業や共同企画のご相談。</p>
+          <a href="mailto:info@ether.local?subject=Partnership%20Inquiry">
+            <span>パートナーシップを相談する</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+        <article class="contact-channel" data-reveal>
+          <span class="channel-icon" aria-hidden="true">
+            <span class="material-symbols-rounded">apartment</span>
+          </span>
+          <h3>会社情報</h3>
+          <p>商号・所在地・事業年度などの基本情報は会社概要ページに掲載しています。</p>
+          <a href="{% url 'company' %}">
+            <span>会社概要を見る</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+      </div>
     </div>
   </section>
 {% endblock content %}

@@ -9,69 +9,159 @@
   page-home
 {% endblock bodyclass %}
 {% block content %}
-  <section class="hero-section">
-    <img class="hero-image"
-         src="{% static 'images/ether-hero.png' %}"
-         alt="Vinyl record and glass blocks overlooking the Tokyo skyline" />
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>Ether合同会社</h1>
-      <p class="hero-lead">音楽カルチャー、イベント、ソフトウェア、Web3を横断し、企画から実装までを静かに前へ進める組織です。</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="{% url 'services' %}">事業内容を見る</a>
-        <a class="btn btn-outline-light" href="mailto:info@ether.local">info@ether.local</a>
+  <section class="hero-section" aria-labelledby="hero-heading">
+    <div class="container hero-grid">
+      <div class="hero-content" data-reveal>
+        <p class="eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Tokyo · Music · Software · Web3</span>
+        </p>
+        <h1 id="hero-heading">
+          文化と技術を、<br />
+          <span class="accent">静かに前へ。</span>
+        </h1>
+        <p class="hero-lead">
+          Ether合同会社は、音楽カルチャー、イベント、ソフトウェア、Web3を横断し、企画から実装までを丁寧に進める組織です。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-filled" href="{% url 'services' %}">
+            <span>事業内容を見る</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+          <a class="btn btn-tonal" href="{% url 'contact' %}">
+            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+            <span>お問い合わせ</span>
+          </a>
+        </div>
+        <dl class="hero-meta" aria-label="会社の基本情報">
+          <div class="hero-meta-item">
+            <dt class="hero-meta-label">Founded</dt>
+            <dd class="hero-meta-value">Tokyo, Japan</dd>
+          </div>
+          <div class="hero-meta-item">
+            <dt class="hero-meta-label">Domains</dt>
+            <dd class="hero-meta-value">Music · Events · Software · Web3</dd>
+          </div>
+          <div class="hero-meta-item">
+            <dt class="hero-meta-label">Approach</dt>
+            <dd class="hero-meta-value">Calm, considered, hands-on</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero-visual" data-reveal aria-hidden="true">
+        <div class="hero-card is-primary span-2">
+          <span class="card-icon">
+            <span class="material-symbols-rounded">graphic_eq</span>
+          </span>
+          <div>
+            <h3>Music & Media</h3>
+            <p>レコード、映像、出版を横断する企画と制作。</p>
+          </div>
+        </div>
+        <div class="hero-card is-secondary">
+          <span class="card-icon">
+            <span class="material-symbols-rounded">stadium</span>
+          </span>
+          <div>
+            <h3>Live Culture</h3>
+            <p>イベントと場所づくり。</p>
+          </div>
+        </div>
+        <div class="hero-card is-tertiary">
+          <span class="card-icon">
+            <span class="material-symbols-rounded">hub</span>
+          </span>
+          <div>
+            <h3>Web3</h3>
+            <p>分散システムの設計と運用。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section class="section section-intro">
+  <section class="section section-intro" aria-labelledby="focus-heading">
     <div class="container split-layout">
-      <div>
-        <p class="section-label">Focus</p>
-        <h2>Culture and infrastructure for the next layer.</h2>
+      <div class="lead-block" data-reveal>
+        <p class="eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Focus</span>
+        </p>
+        <h2 id="focus-heading" class="headline">次のレイヤーのカルチャーとインフラ。</h2>
       </div>
-      <p class="large-copy">
+      <p class="body-lg" data-reveal>
         Ether合同会社は、音楽・映像メディア、ライブイベント、ソフトウェア、ブロックチェーン技術を扱う会社です。
         表現と技術の接点にあるプロジェクトを、企画、開発、運用、コンサルティングの面から支えます。
       </p>
     </div>
   </section>
-  <section class="section section-muted">
+  <section class="section section-muted" aria-labelledby="services-heading">
     <div class="container">
-      <div class="section-heading">
-        <p class="section-label">Business Areas</p>
-        <h2>主な事業領域</h2>
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Business Areas</span>
+        </p>
+        <h2 id="services-heading" class="headline">主な事業領域</h2>
+        <p class="lead" style="margin-top: var(--space-4);">定款に定める幅広い事業のうち、サイト上では4つの領域を中心に紹介しています。</p>
       </div>
       <div class="service-grid">
-        <article class="service-item">
-          <span class="service-number">01</span>
-          <h3>Music and media</h3>
+        <article class="service-item" data-reveal>
+          <span class="service-icon">
+            <span class="material-symbols-rounded" aria-hidden="true">graphic_eq</span>
+          </span>
+          <p class="service-number">01 — Music & Media</p>
+          <h3>音楽・映像・出版</h3>
           <p>音楽レコード、コンパクトディスク、映像物、出版物などの企画・制作・販売。</p>
         </article>
-        <article class="service-item">
-          <span class="service-number">02</span>
-          <h3>Events and venues</h3>
+        <article class="service-item" data-reveal>
+          <span class="service-icon">
+            <span class="material-symbols-rounded" aria-hidden="true">stadium</span>
+          </span>
+          <p class="service-number">02 — Live Culture</p>
+          <h3>イベント・場づくり</h3>
           <p>イベントの企画・運営、飲食店およびライブハウスの経営に関わる事業。</p>
         </article>
-        <article class="service-item">
-          <span class="service-number">03</span>
-          <h3>Software and data</h3>
+        <article class="service-item" data-reveal>
+          <span class="service-icon">
+            <span class="material-symbols-rounded" aria-hidden="true">code</span>
+          </span>
+          <p class="service-number">03 — Software & Data</p>
+          <h3>ソフトウェア・情報</h3>
           <p>ソフトウェア、情報処理、広告、教育コンテンツ、企業管理領域の企画・提供。</p>
         </article>
-        <article class="service-item">
-          <span class="service-number">04</span>
-          <h3>Web3 consulting</h3>
+        <article class="service-item" data-reveal>
+          <span class="service-icon">
+            <span class="material-symbols-rounded" aria-hidden="true">hub</span>
+          </span>
+          <p class="service-number">04 — Web3</p>
+          <h3>Web3・ブロックチェーン</h3>
           <p>Web3サービス、ブロックチェーン技術、Ethereum関連領域の企画・開発・助言。</p>
         </article>
       </div>
     </div>
   </section>
-  <section class="section">
-    <div class="container callout-band">
-      <div>
-        <p class="section-label">Contact</p>
-        <h2>協業、企画相談、事業に関するお問い合わせ</h2>
+  <section class="section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="callout-band" data-reveal>
+        <div>
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Contact</span>
+          </p>
+          <h2 id="cta-heading" class="headline">協業、企画相談、事業に関するお問い合わせ</h2>
+          <p>表現と技術の交点にあるプロジェクトについて、お気軽にご連絡ください。</p>
+        </div>
+        <div class="callout-actions">
+          <a class="btn btn-outline-light" href="{% url 'contact' %}">
+            <span>お問い合わせフォーム</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+          <a class="btn btn-tonal" href="mailto:info@ether.local">
+            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+            <span>info@ether.local</span>
+          </a>
+        </div>
       </div>
-      <a class="btn btn-primary" href="mailto:info@ether.local">メールで問い合わせる</a>
     </div>
   </section>
 {% endblock content %}

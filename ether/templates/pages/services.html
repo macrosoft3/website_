@@ -7,42 +7,68 @@
   page-services
 {% endblock bodyclass %}
 {% block content %}
-  <section class="page-hero compact-hero">
-    <div class="container">
-      <h1>事業内容</h1>
+  <section class="page-hero compact-hero" aria-labelledby="services-page-heading">
+    <div class="container" data-reveal>
+      <p class="eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Services</span>
+      </p>
+      <h1 id="services-page-heading">事業内容</h1>
       <p>定款に定める幅広い事業目的のうち、公開サイトでは文化・ソフトウェア・Web3領域を中心に紹介します。</p>
     </div>
   </section>
-  <section class="section">
-    <div class="container service-detail-list">
-      <article class="service-detail">
-        <div class="detail-index">01</div>
+  <section class="section" aria-label="事業領域">
+    <div class="container">
+      <div class="service-detail-list">
+        <article class="service-detail" data-reveal>
+          <div class="detail-index" aria-hidden="true">01</div>
+          <div>
+            <h2>音楽・映像・出版メディア</h2>
+            <p>レコード音盤、コンパクトディスク、映像物、印刷物、出版物など、文化的なコンテンツや関連商品の企画・制作・販売を行います。</p>
+          </div>
+        </article>
+        <article class="service-detail" data-reveal>
+          <div class="detail-index" aria-hidden="true">02</div>
+          <div>
+            <h2>イベント・ライブカルチャー</h2>
+            <p>イベントの企画・運営・実施、飲食店やライブハウスの経営など、人が集まる場づくりに関わる事業を扱います。</p>
+          </div>
+        </article>
+        <article class="service-detail" data-reveal>
+          <div class="detail-index" aria-hidden="true">03</div>
+          <div>
+            <h2>ソフトウェア・情報サービス</h2>
+            <p>コンピュータソフトウェア、情報処理、広告、教育コンテンツ、企業管理支援など、事業運営を支えるデジタル領域を推進します。</p>
+          </div>
+        </article>
+        <article class="service-detail" data-reveal>
+          <div class="detail-index" aria-hidden="true">04</div>
+          <div>
+            <h2>Web3・ブロックチェーン</h2>
+            <p>Web3サービス、ブロックチェーン技術、暗号通貨、NFTその他のデジタル資産に関する企画・開発・管理・コンサルティングを行います。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="services-cta">
+    <div class="container">
+      <div class="callout-band" data-reveal>
         <div>
-          <h2>音楽・映像・出版メディア</h2>
-          <p>レコード音盤、コンパクトディスク、映像物、印刷物、出版物など、文化的なコンテンツや関連商品の企画・制作・販売を行います。</p>
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Next step</span>
+          </p>
+          <h2 id="services-cta" class="headline">具体的なご相談は、お気軽に。</h2>
+          <p>領域横断のプロジェクトでも、まずはメッセージをお送りください。</p>
         </div>
-      </article>
-      <article class="service-detail">
-        <div class="detail-index">02</div>
-        <div>
-          <h2>イベント・ライブカルチャー</h2>
-          <p>イベントの企画・運営・実施、飲食店やライブハウスの経営など、人が集まる場づくりに関わる事業を扱います。</p>
+        <div class="callout-actions">
+          <a class="btn btn-outline-light" href="{% url 'contact' %}">
+            <span>お問い合わせ</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
         </div>
-      </article>
-      <article class="service-detail">
-        <div class="detail-index">03</div>
-        <div>
-          <h2>ソフトウェア・情報サービス</h2>
-          <p>コンピュータソフトウェア、情報処理、広告、教育コンテンツ、企業管理支援など、事業運営を支えるデジタル領域を推進します。</p>
-        </div>
-      </article>
-      <article class="service-detail">
-        <div class="detail-index">04</div>
-        <div>
-          <h2>Web3・ブロックチェーン</h2>
-          <p>Web3サービス、ブロックチェーン技術、暗号通貨、NFTその他のデジタル資産に関する企画・開発・管理・コンサルティングを行います。</p>
-        </div>
-      </article>
+      </div>
     </div>
   </section>
 {% endblock content %}
