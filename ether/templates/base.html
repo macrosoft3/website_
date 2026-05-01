@@ -122,22 +122,34 @@
           <nav class="footer-nav" aria-label="フッターナビゲーション">
             <h2 class="footer-heading">サイト</h2>
             <ul>
-              <li><a href="{% url 'home' %}">ホーム</a></li>
-              <li><a href="{% url 'services' %}">事業内容</a></li>
-              <li><a href="{% url 'company' %}">会社概要</a></li>
+              <li>
+                <a href="{% url 'home' %}">ホーム</a>
+              </li>
+              <li>
+                <a href="{% url 'services' %}">事業内容</a>
+              </li>
+              <li>
+                <a href="{% url 'company' %}">会社概要</a>
+              </li>
             </ul>
           </nav>
           <nav class="footer-nav" aria-label="その他">
             <h2 class="footer-heading">コンタクト</h2>
             <ul>
-              <li><a href="{% url 'contact' %}">お問い合わせ</a></li>
-              <li><a href="mailto:info@ether.local">info@ether.local</a></li>
-              <li><a href="{% url 'admin:index' %}">Admin</a></li>
+              <li>
+                <a href="{% url 'contact' %}">お問い合わせ</a>
+              </li>
+              <li>
+                <a href="mailto:info@ether.local">info@ether.local</a>
+              </li>
+              <li>
+                <a href="{% url 'admin:index' %}">Admin</a>
+              </li>
             </ul>
           </nav>
         </div>
         <div class="container footer-meta">
-          <small>&copy; {% now "Y" %} Ether合同会社</small>
+          <small>© {% now "Y" %} Ether合同会社</small>
           <small>Tokyo, Japan</small>
         </div>
       </footer>

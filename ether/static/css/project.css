@@ -413,6 +413,10 @@ a:hover {
   margin: 0;
 }
 
+.section-heading .lead {
+  margin-top: var(--space-4);
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
