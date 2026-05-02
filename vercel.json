@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "python3 -m venv .venv && .venv/bin/python -m pip install --disable-pip-version-check django==6.0.4",
+  "buildCommand": ".venv/bin/python scripts/export_static_site.py",
+  "outputDirectory": "dist"
+}
