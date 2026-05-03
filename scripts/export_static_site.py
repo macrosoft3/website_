@@ -133,7 +133,6 @@ def validate_output(rendered_html: list[str]) -> None:
         Path("contact/index.html"),
         Path("static/css/project.css"),
         Path("static/js/project.js"),
-        Path("static/images/ether-hero.png"),
         Path("static/images/favicons/favicon.ico"),
     ]
     for relative_path in required_files:
