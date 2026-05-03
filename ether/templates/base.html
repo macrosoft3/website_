@@ -15,7 +15,7 @@
     <meta name="description"
           content="Ether合同会社の公式組織サイト。音楽、イベント、ソフトウェア、Web3、ブロックチェーン領域の事業を紹介します。" />
     <meta name="author" content="Ether LLC" />
-    <meta name="theme-color" content="#00696b" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" />
     {% block css %}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,7 +47,7 @@
             <a class="navbar-brand"
                href="{% url 'home' %}"
                aria-label="Ether合同会社 ホーム">
-              <span class="brand-mark" aria-hidden="true">E</span>
+              <span class="brand-mark" aria-hidden="true">&nbsp;</span>
               <span class="brand-name">Ether合同会社</span>
             </a>
             <button class="navbar-toggler"
@@ -82,7 +82,6 @@
                 <li class="nav-item">
                   <a class="btn btn-filled nav-cta {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
                      href="{% url 'contact' %}">
-                    <span class="material-symbols-rounded" aria-hidden="true">mail</span>
                     <span>お問い合わせ</span>
                   </a>
                 </li>
@@ -114,12 +113,12 @@
         <div class="container footer-grid">
           <div class="footer-brand-block">
             <a class="footer-brand" href="{% url 'home' %}">
-              <span class="brand-mark" aria-hidden="true">E</span>
+              <span class="brand-mark" aria-hidden="true">&nbsp;</span>
               <span>Ether合同会社</span>
             </a>
             <p>Music, culture, software and Web3 infrastructure from Tokyo.</p>
           </div>
-          <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <nav class="footer-nav" aria-label="サイト">
             <h2 class="footer-heading">サイト</h2>
             <ul>
               <li>
@@ -131,9 +130,43 @@
               <li>
                 <a href="{% url 'company' %}">会社概要</a>
               </li>
+              <li>
+                <a href="{% url 'contact' %}">お問い合わせ</a>
+              </li>
             </ul>
           </nav>
-          <nav class="footer-nav" aria-label="その他">
+          <nav class="footer-nav" aria-label="事業領域">
+            <h2 class="footer-heading">事業領域</h2>
+            <ul>
+              <li>
+                <a href="{% url 'services' %}">Music & Media</a>
+              </li>
+              <li>
+                <a href="{% url 'services' %}">Live Culture</a>
+              </li>
+              <li>
+                <a href="{% url 'services' %}">Software</a>
+              </li>
+              <li>
+                <a href="{% url 'services' %}">Web3</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer-nav" aria-label="会社情報">
+            <h2 class="footer-heading">会社情報</h2>
+            <ul>
+              <li>
+                <a href="{% url 'company' %}">会社概要</a>
+              </li>
+              <li>
+                <a href="{% url 'company' %}">当社の体制</a>
+              </li>
+              <li>
+                <a href="{% url 'contact' %}">協業の相談</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer-nav" aria-label="コンタクト">
             <h2 class="footer-heading">コンタクト</h2>
             <ul>
               <li>
@@ -142,6 +175,11 @@
               <li>
                 <a href="mailto:info@ether.local">info@ether.local</a>
               </li>
+            </ul>
+          </nav>
+          <nav class="footer-nav" aria-label="管理">
+            <h2 class="footer-heading">管理</h2>
+            <ul>
               <li>
                 <a href="{% url 'admin:index' %}">Admin</a>
               </li>
