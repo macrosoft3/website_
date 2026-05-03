@@ -9,21 +9,19 @@
 {% block content %}
   <section class="page-hero compact-hero"
            aria-labelledby="services-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Services</span>
-      </p>
+    <div class="container container-narrow" data-reveal>
+      <p class="section-label">Business</p>
       <h1 id="services-page-heading">事業内容</h1>
-      <p>定款に定める幅広い事業目的のうち、公開サイトでは文化・ソフトウェア・Web3領域を中心に紹介します。</p>
+      <p>文化、ソフトウェア、Web3の領域で、構想を現場に届く形へ変える事業を展開しています。</p>
     </div>
   </section>
   <section class="section" aria-label="事業領域">
-    <div class="container">
+    <div class="container container-narrow">
       <div class="service-detail-list">
         <article class="service-detail" data-reveal>
           <div class="detail-index" aria-hidden="true">01</div>
           <div>
+            <p class="service-number">Music & Media</p>
             <h2>音楽・映像・出版メディア</h2>
             <p>レコード音盤、コンパクトディスク、映像物、印刷物、出版物など、文化的なコンテンツや関連商品の企画・制作・販売を行います。</p>
           </div>
@@ -31,6 +29,7 @@
         <article class="service-detail" data-reveal>
           <div class="detail-index" aria-hidden="true">02</div>
           <div>
+            <p class="service-number">Live Culture</p>
             <h2>イベント・ライブカルチャー</h2>
             <p>イベントの企画・運営・実施、飲食店やライブハウスの経営など、人が集まる場づくりに関わる事業を扱います。</p>
           </div>
@@ -38,6 +37,7 @@
         <article class="service-detail" data-reveal>
           <div class="detail-index" aria-hidden="true">03</div>
           <div>
+            <p class="service-number">Software & Data</p>
             <h2>ソフトウェア・情報サービス</h2>
             <p>コンピュータソフトウェア、情報処理、広告、教育コンテンツ、企業管理支援など、事業運営を支えるデジタル領域を推進します。</p>
           </div>
@@ -45,6 +45,7 @@
         <article class="service-detail" data-reveal>
           <div class="detail-index" aria-hidden="true">04</div>
           <div>
+            <p class="service-number">Web3</p>
             <h2>Web3・ブロックチェーン</h2>
             <p>Web3サービス、ブロックチェーン技術、暗号通貨、NFTその他のデジタル資産に関する企画・開発・管理・コンサルティングを行います。</p>
           </div>
@@ -52,23 +53,11 @@
       </div>
     </div>
   </section>
-  <section class="section" aria-labelledby="services-cta">
+  <section class="section cta-section" aria-labelledby="services-cta">
     <div class="container">
       <div class="callout-band" data-reveal>
-        <div>
-          <p class="eyebrow">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Next step</span>
-          </p>
-          <h2 id="services-cta" class="headline">具体的なご相談は、お気軽に。</h2>
-          <p>領域横断のプロジェクトでも、まずはメッセージをお送りください。</p>
-        </div>
-        <div class="callout-actions">
-          <a class="btn btn-outline-light" href="{% url 'contact' %}">
-            <span>お問い合わせ</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </div>
+        <h2 id="services-cta">具体的なご相談は、お気軽に。</h2>
+        <a class="btn btn-muted" href="{% url 'contact' %}">お問い合わせ</a>
       </div>
     </div>
   </section>

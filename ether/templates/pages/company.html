@@ -8,55 +8,50 @@
 {% endblock bodyclass %}
 {% block content %}
   <section class="page-hero compact-hero" aria-labelledby="company-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Company</span>
-      </p>
+    <div class="container container-narrow" data-reveal>
+      <p class="section-label">Company</p>
       <h1 id="company-page-heading">会社概要</h1>
       <p>公開情報として必要な会社基本情報を掲載しています。</p>
     </div>
   </section>
   <section class="section" aria-label="会社情報">
-    <div class="container company-panel" data-reveal>
+    <div class="container container-narrow" data-reveal>
       <dl class="company-list">
         <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">domain</span>
-            商号
-          </dt>
+          <dt>商号</dt>
           <dd>
             Ether合同会社
           </dd>
         </div>
         <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
-            本店所在地
-          </dt>
+          <dt>本店所在地</dt>
           <dd>
             東京都新宿区
           </dd>
         </div>
         <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">campaign</span>
-            公告の方法
-          </dt>
+          <dt>公告の方法</dt>
           <dd>
             官報に掲載
           </dd>
         </div>
         <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
-            事業年度
-          </dt>
+          <dt>事業年度</dt>
           <dd>
             毎年4月1日から翌年3月31日まで
           </dd>
         </div>
       </dl>
+    </div>
+  </section>
+  <section class="section section-text" aria-labelledby="company-note-heading">
+    <div class="container container-reading" data-reveal>
+      <h2 id="company-note-heading">文化と技術のあいだに立つ、小さく精度の高い組織。</h2>
+      <p>
+        表現とシステムの両方を理解し、企画の輪郭を保ったまま実装へつなげることを大切にしています。
+        領域をまたぐ相談も、まずは必要な情報を整理するところから始めます。
+      </p>
+      <a class="text-link" href="{% url 'contact' %}">お問い合わせ</a>
     </div>
   </section>
 {% endblock content %}
