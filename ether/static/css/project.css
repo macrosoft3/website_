@@ -59,6 +59,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.bg-light {
+  color: #161d1d;
+}
+
+body.bg-light a:not(.btn) {
+  color: #00696b;
+}
+
+body.bg-light a:not(.btn):hover {
+  color: #003f40;
+}
+
 img,
 svg {
   display: block;
@@ -998,6 +1010,16 @@ h4 {
 
 /* Responsive */
 
+@media (max-width: 1099.98px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-brand-block {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 991.98px) {
   .hero-section h1,
   .page-hero h1 {
@@ -1012,13 +1034,6 @@ h4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .footer-brand-block {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (max-width: 767.98px) {
