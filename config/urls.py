@@ -1,70 +1,118 @@
-from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include
 from django.urls import path
-from django.views import defaults as default_views
 from django.views.generic import TemplateView
 
+
+def _page(template: str, lang: str, page_name: str, alt_url: str) -> TemplateView:
+    return TemplateView.as_view(
+        template_name=template,
+        extra_context={
+            "lang": lang,
+            "page_name": page_name,
+            "alt_lang_url": alt_url,
+        },
+    )
+
+
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("", _page("pages/home.html", "ja", "home", "/en/"), name="home"),
     path(
-        "services/",
-        TemplateView.as_view(template_name="pages/services.html"),
-        name="services",
+        "vision/",
+        _page("pages/vision.html", "ja", "vision", "/en/vision/"),
+        name="vision",
+    ),
+    path(
+        "software/",
+        _page("pages/software.html", "ja", "software", "/en/software/"),
+        name="software",
+    ),
+    path(
+        "holdings/",
+        _page("pages/holdings.html", "ja", "holdings", "/en/holdings/"),
+        name="holdings",
+    ),
+    path(
+        "business/",
+        _page("pages/business.html", "ja", "business", "/en/business/"),
+        name="business",
     ),
     path(
         "company/",
-        TemplateView.as_view(template_name="pages/company.html"),
+        _page("pages/company.html", "ja", "company", "/en/company/"),
         name="company",
     ),
     path(
-        "about/",
-        TemplateView.as_view(template_name="pages/company.html"),
-        name="about",
-    ),
-    path(
         "contact/",
-        TemplateView.as_view(template_name="pages/contact.html"),
+        _page("pages/contact.html", "ja", "contact", "/en/contact/"),
         name="contact",
     ),
-    # Django Admin, use {% url 'admin:index' %}
-    path(settings.ADMIN_URL, admin.site.urls),
-    # User management
-    path("users/", include("ether.users.urls", namespace="users")),
-    path("accounts/", include("allauth.urls")),
-    # Your stuff: custom urls includes go here
-    # ...
-    # Media files
-    *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
+    path(
+        "legal/privacy/",
+        _page("pages/legal/privacy.html", "ja", "privacy", "/en/legal/privacy/"),
+        name="privacy",
+    ),
+    path(
+        "legal/cookies/",
+        _page("pages/legal/cookies.html", "ja", "cookies", "/en/legal/cookies/"),
+        name="cookies",
+    ),
+    path("en/", _page("pages/en/home.html", "en", "home", "/"), name="home_en"),
+    path(
+        "en/vision/",
+        _page("pages/en/vision.html", "en", "vision", "/vision/"),
+        name="vision_en",
+    ),
+    path(
+        "en/software/",
+        _page("pages/en/software.html", "en", "software", "/software/"),
+        name="software_en",
+    ),
+    path(
+        "en/holdings/",
+        _page("pages/en/holdings.html", "en", "holdings", "/holdings/"),
+        name="holdings_en",
+    ),
+    path(
+        "en/business/",
+        _page("pages/en/business.html", "en", "business", "/business/"),
+        name="business_en",
+    ),
+    path(
+        "en/company/",
+        _page("pages/en/company.html", "en", "company", "/company/"),
+        name="company_en",
+    ),
+    path(
+        "en/contact/",
+        _page("pages/en/contact.html", "en", "contact", "/contact/"),
+        name="contact_en",
+    ),
+    path(
+        "en/legal/privacy/",
+        _page("pages/en/legal/privacy.html", "en", "privacy", "/legal/privacy/"),
+        name="privacy_en",
+    ),
+    path(
+        "en/legal/cookies/",
+        _page("pages/en/legal/cookies.html", "en", "cookies", "/legal/cookies/"),
+        name="cookies_en",
+    ),
+    path(
+        "robots.txt",
+        TemplateView.as_view(
+            template_name="robots.txt",
+            content_type="text/plain",
+        ),
+        name="robots",
+    ),
+    path(
+        "sitemap.xml",
+        TemplateView.as_view(
+            template_name="sitemap.xml",
+            content_type="application/xml",
+        ),
+        name="sitemap",
+    ),
+    path("admin/", admin.site.urls),
 ]
 
-
-if settings.DEBUG:
-    # This allows the error pages to be debugged during development, just visit
-    # these url in browser to see how these error pages look like.
-    urlpatterns += [
-        path(
-            "400/",
-            default_views.bad_request,
-            kwargs={"exception": Exception("Bad Request!")},
-        ),
-        path(
-            "403/",
-            default_views.permission_denied,
-            kwargs={"exception": Exception("Permission Denied")},
-        ),
-        path(
-            "404/",
-            default_views.page_not_found,
-            kwargs={"exception": Exception("Page not Found")},
-        ),
-        path("500/", default_views.server_error),
-    ]
-    if "debug_toolbar" in settings.INSTALLED_APPS:
-        import debug_toolbar
-
-        urlpatterns = [
-            path("__debug__/", include(debug_toolbar.urls)),
-            *urlpatterns,
-        ]

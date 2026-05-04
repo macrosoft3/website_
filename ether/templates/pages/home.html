@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-  Ether合同会社 | Music, Software and Web3
+  Ether合同会社 | Ethereum, Software, Culture
 {% endblock title %}
 {% block bodyclass %}
   page-home
@@ -14,20 +14,23 @@
       <div class="hero-content" data-reveal>
         <p class="eyebrow">
           <span class="dot" aria-hidden="true"></span>
-          <span>Tokyo · Music · Software · Web3</span>
+          <span>Tokyo · Ethereum · Software · Culture</span>
         </p>
         <h1 id="hero-heading">
-          文化と技術を、
+          Ethereumを基軸に、
           <br />
-          <span class="accent">静かに前へ。</span>
+          <span class="accent">ソフトウェアと文化を編む。</span>
         </h1>
-        <p class="hero-lead">Ether合同会社は、音楽カルチャー、イベント、ソフトウェア、Web3を横断し、企画から実装までを丁寧に進める組織です。</p>
+        <p class="hero-lead">
+          Ether合同会社は、Ethereumを長期保有資産とし、ソフトウェアプロダクトの開発と
+          文化事業を通じて、技術と表現の交点を静かに形にしていく東京の会社です。
+        </p>
         <div class="hero-actions">
-          <a class="btn btn-filled" href="{% url 'services' %}">
-            <span>事業内容を見る</span>
+          <a class="btn btn-filled" href="/vision/">
+            <span>会社のビジョンを読む</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
           </a>
-          <a class="btn btn-tonal" href="{% url 'contact' %}">
+          <a class="btn btn-tonal" href="/contact/">
             <span class="material-symbols-rounded" aria-hidden="true">mail</span>
             <span>お問い合わせ</span>
           </a>
@@ -36,19 +39,19 @@
           <div class="hero-meta-item">
             <dt class="hero-meta-label">Founded</dt>
             <dd class="hero-meta-value">
-              Tokyo, Japan
+              2025-12-22
+            </dd>
+          </div>
+          <div class="hero-meta-item">
+            <dt class="hero-meta-label">Reserve Asset</dt>
+            <dd class="hero-meta-value">
+              Ethereum (ETH)
             </dd>
           </div>
           <div class="hero-meta-item">
             <dt class="hero-meta-label">Domains</dt>
             <dd class="hero-meta-value">
-              Music · Events · Software · Web3
-            </dd>
-          </div>
-          <div class="hero-meta-item">
-            <dt class="hero-meta-label">Approach</dt>
-            <dd class="hero-meta-value">
-              Calm, considered, hands-on
+              Software · Web3 · Culture
             </dd>
           </div>
         </dl>
@@ -56,29 +59,29 @@
       <div class="hero-visual" data-reveal aria-hidden="true">
         <div class="hero-card is-primary span-2">
           <span class="card-icon">
-            <span class="material-symbols-rounded">graphic_eq</span>
+            <span class="material-symbols-rounded">database</span>
           </span>
           <div>
-            <h3>Music & Media</h3>
-            <p>レコード、映像、出版を横断する企画と制作。</p>
+            <h3>Ethereum Treasury</h3>
+            <p>ETHを長期保有し、事業の基盤資産とする。</p>
           </div>
         </div>
         <div class="hero-card is-secondary">
           <span class="card-icon">
-            <span class="material-symbols-rounded">stadium</span>
+            <span class="material-symbols-rounded">code</span>
           </span>
           <div>
-            <h3>Live Culture</h3>
-            <p>イベントと場所づくり。</p>
+            <h3>Software</h3>
+            <p>個と日常を支えるアプリの設計・開発。</p>
           </div>
         </div>
         <div class="hero-card is-tertiary">
           <span class="card-icon">
-            <span class="material-symbols-rounded">hub</span>
+            <span class="material-symbols-rounded">graphic_eq</span>
           </span>
           <div>
-            <h3>Web3</h3>
-            <p>分散システムの設計と運用。</p>
+            <h3>Culture</h3>
+            <p>音楽、出版、イベント、Web3の表現。</p>
           </div>
         </div>
       </div>
@@ -91,56 +94,71 @@
           <span class="dot" aria-hidden="true"></span>
           <span>Focus</span>
         </p>
-        <h2 id="focus-heading" class="headline">次のレイヤーのカルチャーとインフラ。</h2>
+        <h2 id="focus-heading" class="headline">資産・道具・表現、を地続きに。</h2>
       </div>
       <p class="body-lg" data-reveal>
-        Ether合同会社は、音楽・映像メディア、ライブイベント、ソフトウェア、ブロックチェーン技術を扱う会社です。
-        表現と技術の接点にあるプロジェクトを、企画、開発、運用、コンサルティングの面から支えます。
+        Ethereumを基軸資産として持ち、ソフトウェアプロダクトを道具として作り、
+        音楽や出版や場づくりとして表現する。三つを別ものとして扱わず、
+        ひとつの会社の中で接続することが、Ether合同会社のやり方です。
       </p>
     </div>
   </section>
-  <section class="section section-muted" aria-labelledby="services-heading">
+  <section class="section section-muted" aria-labelledby="pillars-heading">
     <div class="container">
       <div class="section-heading" data-reveal>
         <p class="eyebrow">
           <span class="dot" aria-hidden="true"></span>
-          <span>Business Areas</span>
+          <span>Three Pillars</span>
         </p>
-        <h2 id="services-heading" class="headline">主な事業領域</h2>
-        <p class="lead">定款に定める幅広い事業のうち、サイト上では4つの領域を中心に紹介しています。</p>
+        <h2 id="pillars-heading" class="headline">三つの柱</h2>
+        <p class="lead">事業の輪郭は、保有・開発・文化の三層で構成されています。</p>
       </div>
       <div class="service-grid">
         <article class="service-item" data-reveal>
           <span class="service-icon">
-            <span class="material-symbols-rounded" aria-hidden="true">graphic_eq</span>
+            <span class="material-symbols-rounded" aria-hidden="true">database</span>
           </span>
-          <p class="service-number">01 — Music & Media</p>
-          <h3>音楽・映像・出版</h3>
-          <p>音楽レコード、コンパクトディスク、映像物、出版物などの企画・制作・販売。</p>
-        </article>
-        <article class="service-item" data-reveal>
-          <span class="service-icon">
-            <span class="material-symbols-rounded" aria-hidden="true">stadium</span>
-          </span>
-          <p class="service-number">02 — Live Culture</p>
-          <h3>イベント・場づくり</h3>
-          <p>イベントの企画・運営、飲食店およびライブハウスの経営に関わる事業。</p>
+          <p class="service-number">01 — Holdings</p>
+          <h3>Ethereumの長期保有</h3>
+          <p>
+            ETHを基軸とした自己資金運用。短期売買ではなく、
+            プロトコルそのものへの長期コミットメントとして保有しています。
+          </p>
+          <a class="service-link" href="/holdings/">
+            <span>方針を見る</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
         </article>
         <article class="service-item" data-reveal>
           <span class="service-icon">
             <span class="material-symbols-rounded" aria-hidden="true">code</span>
           </span>
-          <p class="service-number">03 — Software & Data</p>
-          <h3>ソフトウェア・情報</h3>
-          <p>ソフトウェア、情報処理、広告、教育コンテンツ、企業管理領域の企画・提供。</p>
+          <p class="service-number">02 — Software</p>
+          <h3>プロダクトの開発</h3>
+          <p>
+            日々の小さな前向きさを支えるiOSアプリ
+            <strong>GratefulMoments</strong> を中心に、
+            個と日常のためのソフトウェアを開発しています。
+          </p>
+          <a class="service-link" href="/software/">
+            <span>プロダクトを見る</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
         </article>
         <article class="service-item" data-reveal>
           <span class="service-icon">
-            <span class="material-symbols-rounded" aria-hidden="true">hub</span>
+            <span class="material-symbols-rounded" aria-hidden="true">graphic_eq</span>
           </span>
-          <p class="service-number">04 — Web3</p>
-          <h3>Web3・ブロックチェーン</h3>
-          <p>Web3サービス、ブロックチェーン技術、Ethereum関連領域の企画・開発・助言。</p>
+          <p class="service-number">03 — Culture</p>
+          <h3>文化事業の運営</h3>
+          <p>
+            音楽・映像・出版・イベント・場づくり。
+            定款で広く定めた事業領域のうち、表現と人が集まる軸の活動です。
+          </p>
+          <a class="service-link" href="/business/">
+            <span>事業内容を見る</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
         </article>
       </div>
     </div>
@@ -153,17 +171,20 @@
             <span class="dot" aria-hidden="true"></span>
             <span>Contact</span>
           </p>
-          <h2 id="cta-heading" class="headline">協業、企画相談、事業に関するお問い合わせ</h2>
-          <p>表現と技術の交点にあるプロジェクトについて、お気軽にご連絡ください。</p>
+          <h2 id="cta-heading" class="headline">協業・企画・取材のご相談</h2>
+          <p>
+            Ethereumエコシステムでの協業、ソフトウェアの開発、文化事業の企画など。
+            お気軽にご連絡ください。
+          </p>
         </div>
         <div class="callout-actions">
-          <a class="btn btn-outline-light" href="{% url 'contact' %}">
+          <a class="btn btn-outline-light" href="/contact/">
             <span>お問い合わせフォーム</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
           </a>
-          <a class="btn btn-tonal" href="mailto:info@ether.local">
+          <a class="btn btn-tonal" href="mailto:so.masuda.2003@ether-llc.com">
             <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            <span>info@ether.local</span>
+            <span>so.masuda.2003@ether-llc.com</span>
           </a>
         </div>
       </div>

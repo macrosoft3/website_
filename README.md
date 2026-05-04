@@ -1,61 +1,66 @@
-# Ether Organization Website
+# Ether合同会社 / Ether LLC — Website
 
-Organization website for Ether LLC
+[https://ether-llc.com](https://ether-llc.com) で公開している、Ether合同会社の組織サイトです。
 
-[![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+## スタック
 
-## Settings
+- Python 3.12+ / Django 6
+- uv (依存管理)
+- Vercel Python Runtime (`manage.py` 自動検出によるデプロイ)
+- Bootstrap 5 + 自前 CSS (Material 3 風)
 
-Moved to [settings](https://cookiecutter-django.readthedocs.io/en/latest/1-getting-started/settings.html).
+## ローカル開発
 
-## Basic Commands
+```bash
+uv sync
+uv run python manage.py migrate
+uv run python manage.py runserver
+```
 
-### Setting Up Your Users
+`http://localhost:8000/` にアクセス。
 
-- To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+## デプロイ (Vercel)
 
-- To create a **superuser account**, use this command:
+`vercel.json` は不要です。Vercel が `manage.py` を自動検出し、WSGI と静的ファイルを構成します。
 
-      uv run python manage.py createsuperuser
+初回のみ、Django 用の Secret Key を環境変数として登録します:
 
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
+```bash
+uv run python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())' | vercel env add -y DJANGO_SECRET_KEY prod
+```
 
-### Type checks
+以降は `git push` で `main` ブランチがマージされるたびに自動デプロイされます。
 
-Running type checks with mypy:
+## ディレクトリ構成
 
-    uv run mypy ether
+```
+config/         — Django プロジェクト (settings.py, urls.py, wsgi.py)
+ether/
+  templates/    — JA テンプレート + en/ サブディレクトリ
+  static/       — CSS/JS/画像
+manage.py
+pyproject.toml  — 依存定義 (django のみ、dev に djlint と ruff)
+```
 
-### Test coverage
+## URL 構成
 
-To run the tests, check your test coverage, and generate an HTML coverage report:
+| パス | 内容 |
+|---|---|
+| `/`, `/en/` | ホーム |
+| `/vision/`, `/en/vision/` | 会社のビジョン |
+| `/holdings/`, `/en/holdings/` | Ethereum 保有方針 |
+| `/software/`, `/en/software/` | プロダクト紹介 (GratefulMoments) |
+| `/business/`, `/en/business/` | 定款の事業目的 23 項目 |
+| `/company/`, `/en/company/` | 法定の会社情報 |
+| `/contact/`, `/en/contact/` | お問い合わせ窓口 |
+| `/legal/privacy/`, `/legal/cookies/` | プライバシー/Cookieポリシー |
+| `/robots.txt`, `/sitemap.xml` | クローラ向け |
+| `/admin/` | Django 管理画面 |
 
-    uv run coverage run -m pytest
-    uv run coverage html
-    uv run open htmlcov/index.html
+## Lint / Format
 
-#### Running tests with pytest
-
-    uv run pytest
-
-### Live reloading and Sass CSS compilation
-
-Moved to [Live reloading and SASS compilation](https://cookiecutter-django.readthedocs.io/en/latest/2-local-development/developing-locally.html#using-webpack-or-gulp).
-
-### Email Server
-
-In development, it is often nice to be able to see emails that are being sent from your application. For that reason local SMTP server [Mailpit](https://github.com/axllent/mailpit) with a web interface is available as docker container.
-
-Container mailpit will start automatically when you will run all docker containers.
-Please check [cookiecutter-django Docker documentation](https://cookiecutter-django.readthedocs.io/en/latest/2-local-development/developing-locally-docker.html) for more details how to start all containers.
-
-With Mailpit running, to view messages that are sent by your application, open your browser and go to `http://127.0.0.1:8025`
-
-## Deployment
-
-The following details how to deploy this application.
-
-### Docker
-
-See detailed [cookiecutter-django Docker documentation](https://cookiecutter-django.readthedocs.io/en/latest/3-deployment/deployment-with-docker.html).
+```bash
+uv run ruff check .            # Python
+uv run djlint ether/templates/ # Django テンプレート
+uv run djlint ether/templates/ --reformat
+```
