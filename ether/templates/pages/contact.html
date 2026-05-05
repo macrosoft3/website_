@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+  お問い合わせ | Ether合同会社
+{% endblock title %}
+{% block bodyclass %}
+  page-contact
+{% endblock bodyclass %}
+{% block content %}
+  <section class="page-hero compact-hero">
+    <div class="container">
+      <h1>お問い合わせ</h1>
+      <p>協業、企画相談、事業に関するご連絡はメールでお送りください。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-panel">
+      <div>
+        <p class="section-label">Email</p>
+        <h2>info@ether.local</h2>
+        <p>
+          本番ドメインと正式なメールアドレスは公開前に差し替える前提です。現在は初期構築用の仮連絡先を表示しています。
+        </p>
+      </div>
+      <a class="btn btn-primary" href="mailto:info@ether.local">メールを作成する</a>
+    </div>
+  </section>
+{% endblock content %}
