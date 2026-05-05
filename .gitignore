@@ -52,6 +52,7 @@ coverage.xml
 
 # Django stuff:
 staticfiles/
+dist/
 
 # Sphinx documentation
 docs/_build/
@@ -275,3 +276,5 @@ ether/media/
 .env
 .envs/*
 !.envs/.local/
+
+/.claude/worktrees
