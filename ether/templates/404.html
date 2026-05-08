@@ -1,15 +1,36 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Page not found
+  ページが見つかりません | Ether合同会社
 {% endblock title %}
+{% block bodyclass %}
+  page-error
+{% endblock bodyclass %}
 {% block content %}
-  <h1>Page not found</h1>
-  <p>
-    {% if exception %}
-      {{ exception }}
-    {% else %}
-      This is not the page you were looking for.
-    {% endif %}
-  </p>
+  <section class="page-hero compact-hero" aria-labelledby="error-heading">
+    <div class="container" data-reveal>
+      <p class="eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        <span>404</span>
+      </p>
+      <h1 id="error-heading">ページが見つかりません</h1>
+      <p>
+        {% if exception %}
+          {{ exception }}
+        {% else %}
+          お探しのページは移動または削除された可能性があります。URL をご確認のうえ、もう一度お試しください。
+        {% endif %}
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-filled" href="{% url 'home' %}">
+          <span class="material-symbols-rounded" aria-hidden="true">home</span>
+          <span>ホームへ戻る</span>
+        </a>
+        <a class="btn btn-tonal" href="{% url 'contact' %}">
+          <span>お問い合わせ</span>
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
 {% endblock content %}
