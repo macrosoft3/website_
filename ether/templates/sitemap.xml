@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ether-llc.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/vision/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/vision/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/vision/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/holdings/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/holdings/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/holdings/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/software/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/software/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/software/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/business/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/business/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/company/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/company/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/company/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/contact/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/legal/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/legal/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/legal/privacy/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/legal/cookies/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/legal/cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/legal/cookies/" />
+  </url>
+</urlset>

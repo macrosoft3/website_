@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Contact | Ether LLC
+{% endblock title %}
+{% block bodyclass %}
+  page-contact
+{% endblock bodyclass %}
+{% block content %}
+  <section class="page-hero compact-hero" aria-labelledby="contact-page-heading">
+    <div class="container" data-reveal>
+      <p class="eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Contact</span>
+      </p>
+      <h1 id="contact-page-heading">Get in touch</h1>
+      <p>
+        For partnerships, project briefs, press, or Ethereum ecosystem collaboration —
+        please email us. We read each message and reply within a few business days.
+      </p>
+    </div>
+  </section>
+  <section class="section" aria-label="Contact information">
+    <div class="container">
+      <div class="contact-panel" data-reveal>
+        <div>
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Email</span>
+          </p>
+          <h2 class="headline">so.masuda.2003@ether-llc.com</h2>
+          <p>This is the company's primary inbox. All inquiries should start here.</p>
+        </div>
+        <div class="callout-actions">
+          <a class="btn btn-outline-light"
+             href="mailto:so.masuda.2003@ether-llc.com">
+            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+            <span>Compose email</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-channels" aria-label="Contact channels">
+        <article class="contact-channel" data-reveal>
+          <span class="channel-icon" aria-hidden="true">
+            <span class="material-symbols-rounded">handshake</span>
+          </span>
+          <h3>Partnerships</h3>
+          <p>
+            Collaboration on Ethereum ecosystem work, software products,
+            and cultural projects.
+          </p>
+          <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BPartnership%5D%20Inquiry">
+            <span>Discuss a partnership</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+        <article class="contact-channel" data-reveal>
+          <span class="channel-icon" aria-hidden="true">
+            <span class="material-symbols-rounded">code</span>
+          </span>
+          <h3>Software inquiries</h3>
+          <p>
+            iOS / SwiftUI apps, Web3 technical research, licensing,
+            and technical consulting.
+          </p>
+          <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BSoftware%5D%20Inquiry">
+            <span>Discuss a project</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+        <article class="contact-channel" data-reveal>
+          <span class="channel-icon" aria-hidden="true">
+            <span class="material-symbols-rounded">campaign</span>
+          </span>
+          <h3>Press &amp; speaking</h3>
+          <p>
+            Media interviews, articles, and speaking engagements.
+            Please include a topic and a tentative date.
+          </p>
+          <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BPress%5D%20Inquiry">
+            <span>Request press</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+        <article class="contact-channel" data-reveal>
+          <span class="channel-icon" aria-hidden="true">
+            <span class="material-symbols-rounded">apartment</span>
+          </span>
+          <h3>Company information</h3>
+          <p>
+            Registered information, representative, registered address, corporate number —
+            see the Company page.
+          </p>
+          <a href="/en/company/">
+            <span>See company page</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+        </article>
+      </div>
+      <p class="contact-note" data-reveal>
+        Replies may take a few business days.
+        We do not respond to mass-broadcast sales outreach.
+      </p>
+    </div>
+  </section>
+{% endblock content %}
