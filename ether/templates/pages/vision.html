@@ -1,109 +1,38 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Vision | Ether合同会社
+  方針 | Ether合同会社
 {% endblock title %}
+{% block meta_description %}
+  Ether合同会社の基本方針。Ethereum保有、ソフトウェア開発、関連する文化事業の考え方を掲載しています。
+{% endblock meta_description %}
+{% block og_description %}
+  Ether合同会社の基本方針。Ethereum保有、ソフトウェア開発、関連する文化事業の考え方を掲載しています。
+{% endblock og_description %}
 {% block bodyclass %}
   page-vision
 {% endblock bodyclass %}
 {% block content %}
   <section class="page-hero compact-hero" aria-labelledby="vision-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Vision</span>
-      </p>
-      <h1 id="vision-page-heading">Ether — 余白のあるインフラ</h1>
-      <p>会社名と定款の言葉を起点に、なぜEtherを始めたのかをまとめています。</p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container narrow-prose">
-      <article class="prose" data-reveal>
-        <h2>会社名について</h2>
-        <p>
-          Etherという名前は、二つの意味を重ねています。
-          ひとつはイーサリアム（Ethereum）の基盤資産であるETH。
-          もうひとつは、近代物理学が一度想定していた「光や情報を運ぶ媒質」としてのEther（エーテル）です。
-        </p>
-        <p>
-          実体としては存在しないと否定されたエーテルが、
-          いまブロックチェーンという形で再び情報を運ぶ媒体として戻ってきている。
-          会社の名前は、その重なりに対する敬意です。
-        </p>
-      </article>
-      <article class="prose" data-reveal>
-        <h2>三つの態度</h2>
-        <h3>1. 資産は、長く持つ</h3>
-        <p>
-          Ethereumを売買するためではなく、
-          長く持つために保有しています。
-          価格の上下ではなく、プロトコルが解決しようとしている問題に対して
-          時間をかけて関与する立場をとります。
-        </p>
-        <h3>2. 道具は、自分の手で作る</h3>
-        <p>
-          ソフトウェアプロダクトは、思想を試すための道具です。
-          人の暮らしに静かに寄り添うアプリを、
-          外注ではなく自分の手で設計し、書き、運用します。
-          最初のプロダクトはiOS向けの感謝日記
-          <a href="/software/">GratefulMoments</a>です。
-        </p>
-        <h3>3. 表現は、必要なだけ</h3>
-        <p>
-          音楽、出版、イベント、Web3の文化活動は、
-          資産と道具によって支えられた表現です。
-          定款には23項目の事業目的を広く定めていますが、
-          公開サイトでは、いま動いている軸だけを丁寧に紹介していきます。
-        </p>
-      </article>
-      <article class="prose" data-reveal>
-        <h2>余白のあるインフラ</h2>
-        <p>
-          Web3、ソフトウェア、文化。それぞれの領域には、
-          すでに勢いのあるプレイヤーが多数います。
-          私たちは、規模ではなく、余白で勝負します。
-        </p>
-        <p>
-          急がない。広げすぎない。
-          一人の人間と一つの会社が、長く健やかに続けられる速度を保ちながら、
-          Ethereumという基盤の上で、
-          作るに値するものを作り続けていきます。
-        </p>
-      </article>
-      <article class="prose" data-reveal>
-        <h2>運営者について</h2>
-        <p>
-          代表社員: 増田 創（Soh Masuda）。
-          ソフトウェアエンジニアとして個人開発を続ける傍ら、
-          2025年12月にEther合同会社を東京で設立しました。
-          会社情報は<a href="/company/">会社概要</a>を、
-          連絡は<a href="/contact/">お問い合わせ</a>からお願いします。
-        </p>
-      </article>
-    </div>
-  </section>
-  <section class="section" aria-labelledby="vision-cta">
     <div class="container">
-      <div class="callout-band" data-reveal>
-        <div>
-          <p class="eyebrow">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Next</span>
-          </p>
-          <h2 id="vision-cta" class="headline">三つの柱を、ひとつずつ。</h2>
-          <p>Holdings・Software・Cultureの各ページで、より具体的な現状と方針を公開しています。</p>
-        </div>
-        <div class="callout-actions">
-          <a class="btn btn-outline-light" href="/holdings/">
-            <span>Holdings</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-          <a class="btn btn-tonal" href="/software/">
-            <span>Software</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </div>
+      <p class="section-label">Vision</p>
+      <h1 id="vision-page-heading">基本方針</h1>
+      <p>Ether合同会社の活動方針を、事業の軸ごとに整理しています。</p>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="policy-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Policy</p>
+        <h2 id="policy-heading">三つの軸</h2>
+      </div>
+      <div>
+        <ul class="plain-list">
+          <li>Ethereumを会社の基軸資産として長期保有します。</li>
+          <li>ソフトウェアは自社で設計、開発、運用します。</li>
+          <li>文化事業は、公開できる活動から順に掲載します。</li>
+        </ul>
+        <a class="text-link" href="/company/">会社情報を見る</a>
       </div>
     </div>
   </section>

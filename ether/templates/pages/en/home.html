@@ -1,191 +1,106 @@
 {% extends "base.html" %}
 
-{% load static %}
-
 {% block title %}
-  Ether LLC | Ethereum, Software, Culture
+  Ether LLC | Ethereum and software company
 {% endblock title %}
+{% block meta_description %}
+  Ether LLC is a Tokyo company focused on Ethereum holdings, software development, and related cultural projects.
+{% endblock meta_description %}
+{% block og_title %}
+  Ether LLC
+{% endblock og_title %}
+{% block og_description %}
+  Ethereum holdings, software development, and related cultural projects from Tokyo.
+{% endblock og_description %}
 {% block bodyclass %}
   page-home
 {% endblock bodyclass %}
 {% block content %}
   <section class="hero-section" aria-labelledby="hero-heading">
-    <div class="container hero-grid">
-      <div class="hero-content" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Tokyo · Ethereum · Software · Culture</span>
-        </p>
-        <h1 id="hero-heading">
-          Anchored in Ethereum.
-          <br />
-          <span class="accent">Building software, weaving culture.</span>
-        </h1>
+    <div class="container">
+      <div class="hero-content">
+        <h1 id="hero-heading">Ether LLC is an Ethereum and software company.</h1>
         <p class="hero-lead">
-          Ether LLC is a Tokyo-based company that holds Ethereum as its long-term reserve asset
-          and works at the intersection of software products and cultural projects.
+          Based in Tokyo, we hold Ethereum for the long term, build software, and operate related cultural projects.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-filled" href="/en/vision/">
-            <span>Read our vision</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-          <a class="btn btn-tonal" href="/en/contact/">
-            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            <span>Contact</span>
-          </a>
+          <a class="btn btn-filled" href="/en/contact/">Contact</a>
+          <a class="btn btn-outline-light" href="/en/company/">Company</a>
         </div>
-        <dl class="hero-meta" aria-label="Company facts">
-          <div class="hero-meta-item">
-            <dt class="hero-meta-label">Founded</dt>
-            <dd class="hero-meta-value">
-              2025-12-22
+      </div>
+    </div>
+  </section>
+  <section class="section simple-section" aria-labelledby="overview-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Overview</p>
+        <h2 id="overview-heading">Core business</h2>
+      </div>
+      <div>
+        <p>
+          Ether LLC holds Ethereum as a corporate reserve and develops software, primarily iOS apps.
+          This site lists the information we can publicly disclose.
+        </p>
+        <a class="text-link" href="/en/holdings/">Ethereum holding policy</a>
+      </div>
+    </div>
+  </section>
+  <section class="section simple-section" aria-labelledby="business-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Business</p>
+        <h2 id="business-heading">Current work</h2>
+      </div>
+      <div>
+        <ul class="plain-list">
+          <li>Ethereum holdings</li>
+          <li>Software development</li>
+          <li>Related cultural projects</li>
+        </ul>
+        <a class="text-link" href="/en/software/">See software</a>
+      </div>
+    </div>
+  </section>
+  <section class="section simple-section" aria-labelledby="company-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Company</p>
+        <h2 id="company-heading">Public facts</h2>
+      </div>
+      <div>
+        <dl class="fact-list compact">
+          <div>
+            <dt>Legal name</dt>
+            <dd>
+              Ether合同会社 (Ether LLC)
             </dd>
           </div>
-          <div class="hero-meta-item">
-            <dt class="hero-meta-label">Reserve Asset</dt>
-            <dd class="hero-meta-value">
-              Ethereum (ETH)
+          <div>
+            <dt>Office</dt>
+            <dd>
+              Shinjuku-ku, Tokyo
             </dd>
           </div>
-          <div class="hero-meta-item">
-            <dt class="hero-meta-label">Domains</dt>
-            <dd class="hero-meta-value">
-              Software · Web3 · Culture
+          <div>
+            <dt>Corporate number</dt>
+            <dd>
+              4011103016903
             </dd>
           </div>
         </dl>
-      </div>
-      <div class="hero-visual" data-reveal aria-hidden="true">
-        <div class="hero-card is-primary span-2">
-          <span class="card-icon">
-            <span class="material-symbols-rounded">database</span>
-          </span>
-          <div>
-            <h3>Ethereum Treasury</h3>
-            <p>ETH held as a long-term foundation, not a trading position.</p>
-          </div>
-        </div>
-        <div class="hero-card is-secondary">
-          <span class="card-icon">
-            <span class="material-symbols-rounded">code</span>
-          </span>
-          <div>
-            <h3>Software</h3>
-            <p>Quiet apps for the texture of everyday life.</p>
-          </div>
-        </div>
-        <div class="hero-card is-tertiary">
-          <span class="card-icon">
-            <span class="material-symbols-rounded">graphic_eq</span>
-          </span>
-          <div>
-            <h3>Culture</h3>
-            <p>Music, publishing, events and Web3 expression.</p>
-          </div>
-        </div>
+        <a class="text-link" href="/en/company/">See company facts</a>
       </div>
     </div>
   </section>
-  <section class="section section-intro" aria-labelledby="focus-heading">
-    <div class="container split-layout">
-      <div class="lead-block" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Focus</span>
-        </p>
-        <h2 id="focus-heading" class="headline">Asset, tool, expression — kept on the same line.</h2>
+  <section class="section simple-section" aria-labelledby="contact-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Contact</p>
+        <h2 id="contact-heading">Contact us</h2>
       </div>
-      <p class="body-lg" data-reveal>
-        Hold Ethereum as a reserve. Build software as the tool. Make music, publish, and host
-        as the expression. We don't treat these as separate departments — they share one
-        company, one direction, one quiet pace.
-      </p>
-    </div>
-  </section>
-  <section class="section section-muted" aria-labelledby="pillars-heading">
-    <div class="container">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Three Pillars</span>
-        </p>
-        <h2 id="pillars-heading" class="headline">Three pillars</h2>
-        <p class="lead">The shape of the company is three layers — holdings, software and culture.</p>
-      </div>
-      <div class="service-grid">
-        <article class="service-item" data-reveal>
-          <span class="service-icon">
-            <span class="material-symbols-rounded" aria-hidden="true">database</span>
-          </span>
-          <p class="service-number">01 — Holdings</p>
-          <h3>Long-term Ethereum holding</h3>
-          <p>
-            Self-funded ETH reserve. Held as a long-term commitment to the protocol,
-            not as a trading position.
-          </p>
-          <a class="service-link" href="/en/holdings/">
-            <span>Read the policy</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </article>
-        <article class="service-item" data-reveal>
-          <span class="service-icon">
-            <span class="material-symbols-rounded" aria-hidden="true">code</span>
-          </span>
-          <p class="service-number">02 — Software</p>
-          <h3>Building products</h3>
-          <p>
-            Software for individuals and quiet daily moments. Our flagship is
-            <strong>GratefulMoments</strong>, a SwiftUI gratitude journal for iOS.
-          </p>
-          <a class="service-link" href="/en/software/">
-            <span>See products</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </article>
-        <article class="service-item" data-reveal>
-          <span class="service-icon">
-            <span class="material-symbols-rounded" aria-hidden="true">graphic_eq</span>
-          </span>
-          <p class="service-number">03 — Culture</p>
-          <h3>Cultural projects</h3>
-          <p>
-            Music, video, publishing, events and venues. The expressive side of a deliberately
-            broad set of business purposes.
-          </p>
-          <a class="service-link" href="/en/business/">
-            <span>See business areas</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="section" aria-labelledby="cta-heading">
-    <div class="container">
-      <div class="callout-band" data-reveal>
-        <div>
-          <p class="eyebrow">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Contact</span>
-          </p>
-          <h2 id="cta-heading" class="headline">Partnerships, projects and press.</h2>
-          <p>
-            Reach out for collaboration in the Ethereum ecosystem, software development,
-            or cultural projects. We read every message.
-          </p>
-        </div>
-        <div class="callout-actions">
-          <a class="btn btn-outline-light" href="/en/contact/">
-            <span>Contact form</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-          <a class="btn btn-tonal" href="mailto:so.masuda.2003@ether-llc.com">
-            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            <span>so.masuda.2003@ether-llc.com</span>
-          </a>
-        </div>
+      <div>
+        <p>For partnerships, software work, and press inquiries, contact us by email.</p>
+        <a class="btn btn-filled" href="/en/contact/">Contact</a>
       </div>
     </div>
   </section>

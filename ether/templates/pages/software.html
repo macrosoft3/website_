@@ -3,207 +3,77 @@
 {% block title %}
   Software | Ether合同会社
 {% endblock title %}
+{% block meta_description %}
+  Ether合同会社のソフトウェア開発。iOSアプリ GratefulMoments の概要、技術スタック、ライセンス、公開状況を掲載しています。
+{% endblock meta_description %}
+{% block og_description %}
+  Ether合同会社のソフトウェア開発。iOSアプリ GratefulMoments の概要、技術スタック、ライセンス、公開状況を掲載しています。
+{% endblock og_description %}
 {% block bodyclass %}
   page-software
 {% endblock bodyclass %}
 {% block content %}
   <section class="page-hero compact-hero"
            aria-labelledby="software-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Software</span>
-      </p>
-      <h1 id="software-page-heading">日々を支える、静かなアプリ。</h1>
-      <p>
-        Ether合同会社は、ソフトウェアプロダクトを思想を試す道具と捉えています。
-        個と日常に寄り添うアプリを、自分たちの手で設計し、書き、運用しています。
-      </p>
+    <div class="container">
+      <p class="section-label">Software</p>
+      <h1 id="software-page-heading">ソフトウェア開発</h1>
+      <p>Ether合同会社は、iOSアプリを中心にソフトウェアを開発しています。</p>
     </div>
   </section>
-  <section class="section section-muted" aria-labelledby="flagship-heading">
-    <div class="container">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Flagship</span>
-        </p>
-        <h2 id="flagship-heading" class="headline">GratefulMoments</h2>
-        <p class="lead">日々の「ありがとう」を残すiOS用の感謝日記アプリ。</p>
+  <section class="section" aria-labelledby="product-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Product</p>
+        <h2 id="product-heading">GratefulMoments</h2>
       </div>
-      <div class="product-card" data-reveal>
-        <div class="product-card-body">
-          <p class="product-tagline">SwiftUI · SwiftData · Apple Intelligence</p>
-          <h3>毎日の小さな前向きさを、静かに積み上げる</h3>
-          <p>
-            タイトル、メモ、写真でうれしかったできごとを書き留め、
-            連続記録日数とバッジで習慣化をやさしく支援します。
-            iOS 26以降のApple Intelligence対応端末では、
-            書いた内容をもとにふりかえりチャットも利用できます。
-          </p>
-          <ul class="product-feature-list">
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">edit_note</span>
-              <span>ありがとう日記: タイトル・メモ・写真でできごとを残す</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">photo_library</span>
-              <span>写真サポート: PhotosPickerで画像を添付</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">hexagon</span>
-              <span>六角形UI: HexagonLayoutでできごとを視覚化</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">local_fire_department</span>
-              <span>連続記録日数: 毎日の習慣をストリークで可視化</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">workspace_premium</span>
-              <span>バッジシステム: 達成条件に応じてアンロック</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">psychology</span>
-              <span>ふりかえり: Apple Intelligenceで過去の記録を対話的に振り返る</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">storage</span>
-              <span>SwiftData永続化: できごととバッジをローカル保存</span>
-            </li>
-          </ul>
-          <dl class="product-meta">
-            <div>
-              <dt>プラットフォーム</dt>
-              <dd>
-                iOS 18.6以上 (ふりかえり機能はiOS 26以降)
-              </dd>
-            </div>
-            <div>
-              <dt>技術スタック</dt>
-              <dd>
-                Swift / SwiftUI / SwiftData / PhotosUI
-              </dd>
-            </div>
-            <div>
-              <dt>ライセンス</dt>
-              <dd>
-                Apache License 2.0 (オープンソース)
-              </dd>
-            </div>
-            <div>
-              <dt>ステータス</dt>
-              <dd>
-                開発継続中 / App Store公開準備中
-              </dd>
-            </div>
-          </dl>
-          <div class="product-actions">
-            <a class="btn btn-filled"
-               href="https://github.com/masuda-so/GratefulMoments"
-               rel="noopener"
-               target="_blank">
-              <span class="material-symbols-rounded" aria-hidden="true">code</span>
-              <span>GitHubで見る</span>
-            </a>
-            <a class="btn btn-outline-light disabled"
-               aria-disabled="true"
-               tabindex="-1">
-              <span class="material-symbols-rounded" aria-hidden="true">apple</span>
-              <span>App Store - Coming soon</span>
-            </a>
+      <div>
+        <p>
+          GratefulMomentsは、日々の感謝を記録するiOSアプリです。
+          タイトル、メモ、写真でできごとを保存し、習慣化を支援します。
+        </p>
+        <dl class="fact-list compact">
+          <div>
+            <dt>プラットフォーム</dt>
+            <dd>
+              iOS
+            </dd>
           </div>
-        </div>
+          <div>
+            <dt>技術</dt>
+            <dd>
+              Swift / SwiftUI / SwiftData / PhotosUI
+            </dd>
+          </div>
+          <div>
+            <dt>ライセンス</dt>
+            <dd>
+              Apache License 2.0
+            </dd>
+          </div>
+          <div>
+            <dt>状態</dt>
+            <dd>
+              開発中 / App Store公開準備中
+            </dd>
+          </div>
+        </dl>
+        <a class="text-link"
+           href="https://github.com/masuda-so/GratefulMoments"
+           rel="noopener noreferrer"
+           target="_blank">GitHubで見る</a>
       </div>
     </div>
   </section>
-  <section class="section" aria-labelledby="approach-heading">
-    <div class="container">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Approach</span>
-        </p>
-        <h2 id="approach-heading" class="headline">プロダクトに対する態度</h2>
+  <section class="section simple-section" aria-labelledby="contact-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Contact</p>
+        <h2 id="contact-heading">開発の相談</h2>
       </div>
-      <div class="approach-grid">
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">01</span>
-          <h3>個に寄り添う</h3>
-          <p>
-            大規模プラットフォームではなく、
-            一人の人間の日常に静かに寄り添うアプリを作ります。
-          </p>
-        </article>
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">02</span>
-          <h3>長く続ける</h3>
-          <p>
-            一度公開したアプリは、流行ではなく定着を目指して、
-            少しずつ手を入れ続けます。
-          </p>
-        </article>
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">03</span>
-          <h3>オープンソースを基本に</h3>
-          <p>
-            可能なものはApache License 2.0などで公開し、
-            技術コミュニティへ還元することを基本姿勢としています。
-          </p>
-        </article>
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">04</span>
-          <h3>新しいAPIを早めに試す</h3>
-          <p>
-            Apple Intelligenceなど新しいプラットフォームAPIは、
-            現実的な用途に絞って早期に組み込んで検証します。
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="section section-muted" aria-labelledby="roadmap-heading">
-    <div class="container">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Roadmap</span>
-        </p>
-        <h2 id="roadmap-heading" class="headline">これから</h2>
-        <p class="lead">短期で予定している取り組み。詳細は確定次第、本ページでお知らせします。</p>
-      </div>
-      <ul class="roadmap-list" data-reveal>
-        <li>
-          <span class="roadmap-tag">In progress</span>
-          <p>GratefulMomentsのApp Store審査向け仕上げ</p>
-        </li>
-        <li>
-          <span class="roadmap-tag">Planned</span>
-          <p>感謝日記体験を補完する小さなiOSウィジェットの追加</p>
-        </li>
-        <li>
-          <span class="roadmap-tag">Exploring</span>
-          <p>Web3要素（オンチェーン保存・属性付きNFTなど）との接続検証</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="section" aria-labelledby="software-cta">
-    <div class="container">
-      <div class="callout-band" data-reveal>
-        <div>
-          <p class="eyebrow">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Collaborate</span>
-          </p>
-          <h2 id="software-cta" class="headline">ソフトウェア開発の協業</h2>
-          <p>SwiftUI/Web3領域での共同企画、ライセンス、技術相談などお気軽にどうぞ。</p>
-        </div>
-        <div class="callout-actions">
-          <a class="btn btn-outline-light" href="/contact/">
-            <span>お問い合わせ</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </div>
+      <div>
+        <p>SwiftUI、iOSアプリ、Web3関連の相談はメールで受け付けています。</p>
+        <a class="btn btn-filled" href="/contact/">お問い合わせ</a>
       </div>
     </div>
   </section>
