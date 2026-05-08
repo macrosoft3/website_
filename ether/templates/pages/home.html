@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  Ether合同会社 | Music, Software and Web3
+{% endblock title %}
+{% block bodyclass %}
+  page-home
+{% endblock bodyclass %}
+{% block content %}
+  <section class="hero-section">
+    <img class="hero-image"
+         src="{% static 'images/ether-hero.png' %}"
+         alt="Vinyl record and glass blocks overlooking the Tokyo skyline" />
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Ether合同会社</h1>
+      <p class="hero-lead">
+        音楽カルチャー、イベント、ソフトウェア、Web3を横断し、企画から実装までを静かに前へ進める組織です。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{% url 'services' %}">事業内容を見る</a>
+        <a class="btn btn-outline-light" href="mailto:info@ether.local">info@ether.local</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-intro">
+    <div class="container split-layout">
+      <div>
+        <p class="section-label">Focus</p>
+        <h2>Culture and infrastructure for the next layer.</h2>
+      </div>
+      <p class="large-copy">
+        Ether合同会社は、音楽・映像メディア、ライブイベント、ソフトウェア、ブロックチェーン技術を扱う会社です。
+        表現と技術の接点にあるプロジェクトを、企画、開発、運用、コンサルティングの面から支えます。
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-muted">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Business Areas</p>
+        <h2>主な事業領域</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-item">
+          <span class="service-number">01</span>
+          <h3>Music and media</h3>
+          <p>音楽レコード、コンパクトディスク、映像物、出版物などの企画・制作・販売。</p>
+        </article>
+        <article class="service-item">
+          <span class="service-number">02</span>
+          <h3>Events and venues</h3>
+          <p>イベントの企画・運営、飲食店およびライブハウスの経営に関わる事業。</p>
+        </article>
+        <article class="service-item">
+          <span class="service-number">03</span>
+          <h3>Software and data</h3>
+          <p>ソフトウェア、情報処理、広告、教育コンテンツ、企業管理領域の企画・提供。</p>
+        </article>
+        <article class="service-item">
+          <span class="service-number">04</span>
+          <h3>Web3 consulting</h3>
+          <p>Web3サービス、ブロックチェーン技術、Ethereum関連領域の企画・開発・助言。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container callout-band">
+      <div>
+        <p class="section-label">Contact</p>
+        <h2>協業、企画相談、事業に関するお問い合わせ</h2>
+      </div>
+      <a class="btn btn-primary" href="mailto:info@ether.local">メールで問い合わせる</a>
+    </div>
+  </section>
+{% endblock content %}
