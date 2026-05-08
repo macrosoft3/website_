@@ -16,10 +16,12 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-          content="{% block meta_description %}{% if lang == 'en' %}Ether LLC is a Tokyo-based Web3 holding company centered on Ethereum, building software products and supporting culture-meets-technology projects.{% else %}Ether合同会社は、東京を拠点に、Ethereumを基軸資産としてソフトウェアと文化事業を進めるWeb3ホールディングです。{% endif %}{% endblock meta_description %}" />
+          content="{% block meta_description %}{% if lang == 'en' %}Ether LLC is a Tokyo company focused on Ethereum holdings, software development, and related cultural projects.{% else %}Ether合同会社は、Ethereum保有、ソフトウェア開発、関連する文化事業を行う東京の会社です。{% endif %}{% endblock meta_description %}" />
     <meta name="author" content="Ether LLC" />
     <meta name="theme-color" content="#00696b" />
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" />
+    <link rel="canonical"
+          href="https://ether-llc.com{{ request.path|default:'/' }}" />
     {% if alt_lang_url %}
       <link rel="alternate"
             hreflang="{% if lang == 'en' %}ja{% else %}en{% endif %}"
@@ -30,7 +32,7 @@
     <meta property="og:title"
           content="{% block og_title %}{% if lang == 'en' %}Ether LLC{% else %}Ether合同会社{% endif %}{% endblock og_title %}" />
     <meta property="og:description"
-          content="{% block og_description %}{% if lang == 'en' %}Ethereum-native holding company. Software, culture, Web3.{% else %}Ethereumを基軸資産とするホールディング。ソフトウェア、文化、Web3。{% endif %}{% endblock og_description %}" />
+          content="{% block og_description %}{% if lang == 'en' %}Ethereum holdings, software development, and related cultural projects from Tokyo.{% else %}Ethereum保有、ソフトウェア開発、関連する文化事業を行う東京の会社です。{% endif %}{% endblock og_description %}" />
     <meta property="og:locale"
           content="{% if lang == 'en' %}en_US{% else %}ja_JP{% endif %}" />
     <meta property="og:url"
@@ -121,18 +123,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item">
-                  <a class="nav-link {% if page_name == 'vision' %}active{% endif %}"
-                     href="{% if lang == 'en' %}/en/vision/{% else %}/vision/{% endif %}">
-                    <span>
-                      {% if lang == 'en' %}
-                        Vision
-                      {% else %}
-                        Vision
-                      {% endif %}
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link {% if page_name == 'holdings' %}active{% endif %}"
                      href="{% if lang == 'en' %}/en/holdings/{% else %}/holdings/{% endif %}">
                     <span>Holdings</span>
@@ -142,18 +132,6 @@
                   <a class="nav-link {% if page_name == 'software' %}active{% endif %}"
                      href="{% if lang == 'en' %}/en/software/{% else %}/software/{% endif %}">
                     <span>Software</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% if page_name == 'business' %}active{% endif %}"
-                     href="{% if lang == 'en' %}/en/business/{% else %}/business/{% endif %}">
-                    <span>
-                      {% if lang == 'en' %}
-                        Business
-                      {% else %}
-                        事業内容
-                      {% endif %}
-                    </span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -187,7 +165,6 @@
                 <li class="nav-item">
                   <a class="btn btn-filled nav-cta {% if page_name == 'contact' %}active{% endif %}"
                      href="{% if lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}">
-                    <span class="material-symbols-rounded" aria-hidden="true">mail</span>
                     <span>
                       {% if lang == 'en' %}
                         Contact
