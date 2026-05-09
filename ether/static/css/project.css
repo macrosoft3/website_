@@ -478,37 +478,12 @@ h4 {
   font-size: 1.05rem;
 }
 
-/* Visual panels */
-
-.image-section {
-  padding: 0 0 var(--space-8);
-}
-
-.visual-frame {
-  margin: 0;
-}
-
-.visual-frame img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: var(--color-panel);
-  border-radius: var(--radius-sm);
-}
-
-.visual-frame figcaption {
-  margin-top: var(--space-3);
-  color: var(--color-muted);
-  font-size: 0.84rem;
-}
-
 .info-section {
   padding-top: var(--space-9);
   padding-bottom: 184px;
 }
 
-.abstract-field,
-.visual-frame-muted {
+.abstract-field {
   position: relative;
   min-height: 520px;
   overflow: hidden;
@@ -521,9 +496,7 @@ h4 {
 }
 
 .abstract-field::before,
-.abstract-field::after,
-.visual-frame-muted::before,
-.visual-frame-muted::after {
+.abstract-field::after {
   content: "";
   position: absolute;
   inset: 12%;
@@ -532,8 +505,7 @@ h4 {
   transform: rotate(-8deg);
 }
 
-.abstract-field::after,
-.visual-frame-muted::after {
+.abstract-field::after {
   inset: 22% 8%;
   transform: rotate(12deg);
 }
@@ -1076,13 +1048,8 @@ h4 {
     font-size: 1.02rem;
   }
 
-  .abstract-field,
-  .visual-frame-muted {
+  .abstract-field {
     min-height: 320px;
-  }
-
-  .image-section {
-    padding-bottom: var(--space-6);
   }
 
   .statement-section,
