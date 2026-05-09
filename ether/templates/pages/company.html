@@ -3,6 +3,12 @@
 {% block title %}
   会社概要 | Ether合同会社
 {% endblock title %}
+{% block meta_description %}
+  Ether合同会社の商号、代表者、所在地、法人番号、事業年度、連絡先などの公開情報です。
+{% endblock meta_description %}
+{% block og_description %}
+  Ether合同会社の商号、代表者、所在地、法人番号、事業年度、連絡先などの公開情報です。
+{% endblock og_description %}
 {% block bodyclass %}
   page-company
 {% endblock bodyclass %}
@@ -14,7 +20,7 @@
         <span>Company</span>
       </p>
       <h1 id="company-page-heading">会社概要</h1>
-      <p>登記情報および公開可能な範囲の基本情報を掲載しています。</p>
+      <p>商号、代表者、所在地、法人番号などの公開情報です。</p>
     </div>
   </section>
   <section class="section" aria-label="会社情報">
@@ -72,7 +78,7 @@
           </dt>
           <dd>
             <a href="https://www.houjin-bangou.nta.go.jp/henkorireki-johoSearch?selHouzinNo=4011103016903"
-               rel="noopener"
+               rel="noopener noreferrer"
                target="_blank">4011103016903</a>
           </dd>
         </div>
@@ -118,7 +124,9 @@
             関連リンク
           </dt>
           <dd>
-            <a href="https://github.com/masuda-so" rel="noopener" target="_blank">GitHub: masuda-so</a>
+            <a href="https://github.com/masuda-so"
+               rel="noopener noreferrer"
+               target="_blank">GitHub: masuda-so</a>
           </dd>
         </div>
       </dl>
@@ -129,8 +137,7 @@
       <article class="prose" data-reveal>
         <h2 id="purposes-heading">事業目的</h2>
         <p>
-          定款 第2条において、23項目の事業目的を定めています。
-          領域別に整理した一覧は<a href="/business/">事業内容</a>のページをご覧ください。
+          定款上の事業目的は、領域別に<a href="/business/">事業内容</a>のページで掲載しています。
         </p>
       </article>
     </div>

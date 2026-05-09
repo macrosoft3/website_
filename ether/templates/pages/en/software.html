@@ -3,208 +3,77 @@
 {% block title %}
   Software | Ether LLC
 {% endblock title %}
+{% block meta_description %}
+  Software development by Ether LLC, including GratefulMoments, an iOS gratitude journal built with Swift, SwiftUI, SwiftData, and PhotosUI.
+{% endblock meta_description %}
+{% block og_description %}
+  Software development by Ether LLC, including GratefulMoments, an iOS gratitude journal built with Swift, SwiftUI, SwiftData, and PhotosUI.
+{% endblock og_description %}
 {% block bodyclass %}
   page-software
 {% endblock bodyclass %}
 {% block content %}
   <section class="page-hero compact-hero"
            aria-labelledby="software-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Software</span>
-      </p>
-      <h1 id="software-page-heading">Quiet apps for everyday life.</h1>
-      <p>
-        We treat software products as instruments for testing ideas.
-        Each app is designed, written and operated in-house, and aims to sit gently
-        inside one person's day.
-      </p>
+    <div class="container">
+      <p class="section-label">Software</p>
+      <h1 id="software-page-heading">Software development</h1>
+      <p>Ether LLC develops software, primarily iOS apps.</p>
     </div>
   </section>
-  <section class="section section-muted" aria-labelledby="flagship-heading">
-    <div class="container">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Flagship</span>
-        </p>
-        <h2 id="flagship-heading" class="headline">GratefulMoments</h2>
-        <p class="lead">A SwiftUI gratitude journal for iOS — capture the small good moments of your day.</p>
+  <section class="section" aria-labelledby="product-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Product</p>
+        <h2 id="product-heading">GratefulMoments</h2>
       </div>
-      <div class="product-card" data-reveal>
-        <div class="product-card-body">
-          <p class="product-tagline">SwiftUI · SwiftData · Apple Intelligence</p>
-          <h3>A quiet way to keep small good moments</h3>
-          <p>
-            Save the moments you're grateful for with a title, a note, and a photo.
-            Streak counts and badges make the habit easy to keep without pressure.
-            On iOS 26 with Apple Intelligence enabled, you can also reflect on your past
-            entries through a chat-based conversation.
-          </p>
-          <ul class="product-feature-list">
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">edit_note</span>
-              <span>Gratitude journal: capture moments with a title, note, and photo</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">photo_library</span>
-              <span>Photo support: attach images via PhotosPicker</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">hexagon</span>
-              <span>Hexagon UI: a custom HexagonLayout to visualise entries</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">local_fire_department</span>
-              <span>Streaks: track consecutive days of journaling</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">workspace_premium</span>
-              <span>Badge system: unlock badges as you reach milestones</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">psychology</span>
-              <span>Reflection: chat with your past entries via Apple Intelligence</span>
-            </li>
-            <li>
-              <span class="material-symbols-rounded" aria-hidden="true">storage</span>
-              <span>SwiftData persistence: stored locally on device</span>
-            </li>
-          </ul>
-          <dl class="product-meta">
-            <div>
-              <dt>Platform</dt>
-              <dd>
-                iOS 18.6+ (Reflection requires iOS 26+)
-              </dd>
-            </div>
-            <div>
-              <dt>Stack</dt>
-              <dd>
-                Swift / SwiftUI / SwiftData / PhotosUI
-              </dd>
-            </div>
-            <div>
-              <dt>License</dt>
-              <dd>
-                Apache License 2.0 (open source)
-              </dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>
-                Active development / preparing for App Store release
-              </dd>
-            </div>
-          </dl>
-          <div class="product-actions">
-            <a class="btn btn-filled"
-               href="https://github.com/masuda-so/GratefulMoments"
-               rel="noopener"
-               target="_blank">
-              <span class="material-symbols-rounded" aria-hidden="true">code</span>
-              <span>View on GitHub</span>
-            </a>
-            <a class="btn btn-outline-light disabled"
-               aria-disabled="true"
-               tabindex="-1">
-              <span class="material-symbols-rounded" aria-hidden="true">apple</span>
-              <span>App Store - Coming soon</span>
-            </a>
+      <div>
+        <p>
+          GratefulMoments is an iOS app for recording gratitude.
+          It saves moments with a title, note, and photo, and supports habit building.
+        </p>
+        <dl class="fact-list compact">
+          <div>
+            <dt>Platform</dt>
+            <dd>
+              iOS
+            </dd>
           </div>
-        </div>
+          <div>
+            <dt>Technology</dt>
+            <dd>
+              Swift / SwiftUI / SwiftData / PhotosUI
+            </dd>
+          </div>
+          <div>
+            <dt>License</dt>
+            <dd>
+              Apache License 2.0
+            </dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>
+              In development / preparing for App Store release
+            </dd>
+          </div>
+        </dl>
+        <a class="text-link"
+           href="https://github.com/masuda-so/GratefulMoments"
+           rel="noopener noreferrer"
+           target="_blank">View on GitHub</a>
       </div>
     </div>
   </section>
-  <section class="section" aria-labelledby="approach-heading">
-    <div class="container">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Approach</span>
-        </p>
-        <h2 id="approach-heading" class="headline">How we build</h2>
+  <section class="section simple-section" aria-labelledby="contact-heading">
+    <div class="container simple-layout">
+      <div>
+        <p class="section-label">Contact</p>
+        <h2 id="contact-heading">Software inquiries</h2>
       </div>
-      <div class="approach-grid">
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">01</span>
-          <h3>Personal, not platform</h3>
-          <p>
-            We don't build large-scale platforms. We build apps that try to live quietly
-            inside one person's day.
-          </p>
-        </article>
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">02</span>
-          <h3>Long-term care</h3>
-          <p>
-            Once an app ships, we tend to it slowly over years.
-            We aim for products that stay rather than products that trend.
-          </p>
-        </article>
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">03</span>
-          <h3>Open source by default</h3>
-          <p>
-            Where possible, we publish under permissive licenses (e.g. Apache 2.0)
-            and try to give back to the technical community.
-          </p>
-        </article>
-        <article class="approach-item" data-reveal>
-          <span class="approach-num">04</span>
-          <h3>Try new APIs early</h3>
-          <p>
-            We adopt new platform APIs (such as Apple Intelligence) early — but only
-            for narrow, real use cases.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="section section-muted" aria-labelledby="roadmap-heading">
-    <div class="container">
-      <div class="section-heading" data-reveal>
-        <p class="eyebrow">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Roadmap</span>
-        </p>
-        <h2 id="roadmap-heading" class="headline">What's next</h2>
-        <p class="lead">Short-term work in progress. Details land here as they're decided.</p>
-      </div>
-      <ul class="roadmap-list" data-reveal>
-        <li>
-          <span class="roadmap-tag">In progress</span>
-          <p>Polishing GratefulMoments for App Store review</p>
-        </li>
-        <li>
-          <span class="roadmap-tag">Planned</span>
-          <p>Companion iOS widgets for the gratitude journal experience</p>
-        </li>
-        <li>
-          <span class="roadmap-tag">Exploring</span>
-          <p>Optional Web3 hooks (on-chain anchoring, attestation-style NFTs)</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="section" aria-labelledby="software-cta">
-    <div class="container">
-      <div class="callout-band" data-reveal>
-        <div>
-          <p class="eyebrow">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Collaborate</span>
-          </p>
-          <h2 id="software-cta" class="headline">Software collaborations</h2>
-          <p>For SwiftUI / Web3 collaborations, licensing, or technical inquiries — please get in touch.</p>
-        </div>
-        <div class="callout-actions">
-          <a class="btn btn-outline-light" href="/en/contact/">
-            <span>Contact</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </div>
+      <div>
+        <p>For SwiftUI, iOS app, and Web3-related inquiries, contact us by email.</p>
+        <a class="btn btn-filled" href="/en/contact/">Contact</a>
       </div>
     </div>
   </section>
