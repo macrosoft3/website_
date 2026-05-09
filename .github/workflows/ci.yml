@@ -1,18 +1,11 @@
 name: CI
 
-# Enable Buildkit and let compose use it to speed up image building
-env:
-  DOCKER_BUILDKIT: 1
-  COMPOSE_DOCKER_CLI_BUILD: 1
-
 on:
   pull_request:
     branches: ['main']
-    paths-ignore: ['docs/**']
 
   push:
     branches: ['main']
-    paths-ignore: ['docs/**']
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
@@ -22,58 +15,48 @@ jobs:
   linter:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code Repository
+      - name: Checkout
         uses: actions/checkout@v6
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version-file: '.python-version'
+
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
 
-  # With no caching at all the entire ci process takes 3m to complete!
-  pytest:
+  django:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code Repository
+      - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v4
-
-      - name: Build and cache local backend
-        uses: docker/bake-action@v7
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
         with:
-          push: false
-          load: true
-          files: docker-compose.local.yml
-          targets: django
-          set: |
-            django.cache-from=type=gha,scope=django-cached-tests
-            django.cache-to=type=gha,scope=django-cached-tests,mode=max
-            postgres.cache-from=type=gha,scope=postgres-cached-tests
-            postgres.cache-to=type=gha,scope=postgres-cached-tests,mode=max
+          enable-cache: true
 
-      - name: Build and cache docs
-        uses: docker/bake-action@v7
+      - name: Set up Python
+        uses: actions/setup-python@v6
         with:
-          push: false
-          load: true
-          files: docker-compose.docs.yml
-          set: |
-            docs.cache-from=type=gha,scope=cached-docs
-            docs.cache-to=type=gha,scope=cached-docs,mode=max
+          python-version-file: '.python-version'
 
-      - name: Check DB Migrations
-        run: docker compose -f docker-compose.local.yml run --rm django python manage.py makemigrations --check
+      - name: Install dependencies
+        run: uv sync --frozen
 
-      - name: Run DB Migrations
-        run: docker compose -f docker-compose.local.yml run --rm django python manage.py migrate
+      - name: Django system check
+        env:
+          DJANGO_SECRET_KEY: ci-secret-key
+        run: uv run python manage.py check
 
-      - name: Run Django Tests
-        run: docker compose -f docker-compose.local.yml run django pytest
+      - name: Run migrations
+        env:
+          DJANGO_SECRET_KEY: ci-secret-key
+        run: uv run python manage.py migrate --run-syncdb
 
-      - name: Tear down the Stack
-        run: docker compose -f docker-compose.local.yml down
+      - name: Collectstatic
+        env:
+          DJANGO_SECRET_KEY: ci-secret-key
+        run: uv run python manage.py collectstatic --noinput
