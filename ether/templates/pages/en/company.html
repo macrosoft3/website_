@@ -9,137 +9,49 @@
 {% block og_description %}
   Public facts about Ether LLC, including legal name, representative, office, corporate number, fiscal year, and contact address.
 {% endblock og_description %}
-{% block bodyclass %}
-  page-company
-{% endblock bodyclass %}
 {% block content %}
-  <section class="page-hero compact-hero" aria-labelledby="company-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Company</span>
-      </p>
-      <h1 id="company-page-heading">Company facts</h1>
-      <p>Legal name, representative, office, corporate number, and contact information.</p>
-    </div>
+  <section>
+    <h1>Company facts</h1>
+    <dl>
+      <dt>Legal name</dt>
+      <dd>Ether合同会社 (Ether LLC)</dd>
+      <dt>Representative</dt>
+      <dd>Soh Masuda (増田 創)</dd>
+      <dt>Registered office</dt>
+      <dd>4-3-15 Shinjuku, Shinjuku-ku, Tokyo 160-0022, Japan</dd>
+      <dt>Founded</dt>
+      <dd>22 December 2025 (Reiwa 7)</dd>
+      <dt>Capital</dt>
+      <dd>JPY 1</dd>
+      <dt>Corporate number</dt>
+      <dd>
+        <a href="https://www.houjin-bangou.nta.go.jp/henkorireki-johoSearch?selHouzinNo=4011103016903"
+           rel="noopener noreferrer"
+           target="_blank">4011103016903</a>
+      </dd>
+      <dt>Fiscal year</dt>
+      <dd>April 1 to March 31</dd>
+      <dt>Method of public notice</dt>
+      <dd>Publication in the Official Gazette (Kanpo)</dd>
+      <dt>Reserve asset</dt>
+      <dd>Ethereum (ETH) — <a href="/en/holdings/">Holdings</a></dd>
+      <dt>Contact</dt>
+      <dd>
+        <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
+      </dd>
+      <dt>Related links</dt>
+      <dd>
+        <a href="https://github.com/masuda-so"
+           rel="noopener noreferrer"
+           target="_blank">GitHub: masuda-so</a>
+      </dd>
+    </dl>
   </section>
-  <section class="section" aria-label="Company information">
-    <div class="container company-panel" data-reveal>
-      <dl class="company-list">
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">domain</span>
-            Legal name
-          </dt>
-          <dd>
-            Ether合同会社 (Ether LLC)
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">badge</span>
-            Representative / Executive member
-          </dt>
-          <dd>
-            Soh Masuda (増田 創)
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
-            Registered office
-          </dt>
-          <dd>
-            4-3-15 Shinjuku, Shinjuku-ku, Tokyo 160-0022, Japan
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">event</span>
-            Founded
-          </dt>
-          <dd>
-            22 December 2025 (Reiwa 7)
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">savings</span>
-            Capital
-          </dt>
-          <dd>
-            JPY 1
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">tag</span>
-            Corporate number
-          </dt>
-          <dd>
-            <a href="https://www.houjin-bangou.nta.go.jp/henkorireki-johoSearch?selHouzinNo=4011103016903"
-               rel="noopener noreferrer"
-               target="_blank">4011103016903</a>
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
-            Fiscal year
-          </dt>
-          <dd>
-            April 1 to March 31
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">campaign</span>
-            Method of public notice
-          </dt>
-          <dd>
-            Publication in the Official Gazette (Kanpo)
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">database</span>
-            Reserve asset
-          </dt>
-          <dd>
-            Ethereum (ETH) — see <a href="/en/holdings/">Holdings</a>
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            Contact
-          </dt>
-          <dd>
-            <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">link</span>
-            Related links
-          </dt>
-          <dd>
-            <a href="https://github.com/masuda-so"
-               rel="noopener noreferrer"
-               target="_blank">GitHub: masuda-so</a>
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-  <section class="section section-muted" aria-labelledby="purposes-heading">
-    <div class="container narrow-prose">
-      <article class="prose" data-reveal>
-        <h2 id="purposes-heading">Business purposes</h2>
-        <p>
-          A grouped overview of the purposes in our charter is available on the <a href="/en/business/">Business</a> page.
-        </p>
-      </article>
-    </div>
+  <section>
+    <h2>Business purposes</h2>
+    <p>
+      A grouped overview of the purposes in our charter is on the
+      <a href="/en/business/">Business</a> page.
+    </p>
   </section>
 {% endblock content %}
