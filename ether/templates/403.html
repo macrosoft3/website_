@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Forbidden (403)
+  403 | Ether合同会社
 {% endblock title %}
 {% block content %}
-  <h1>Forbidden (403)</h1>
-  <p>
-    {% if exception %}
-      {{ exception }}
-    {% else %}
-      You're not allowed to access this page.
-    {% endif %}
-  </p>
+  <section>
+    <h1>403 — アクセスが拒否されました</h1>
+    <p>
+      {% if exception %}
+        {{ exception }}
+      {% else %}
+        このページへのアクセス権限がありません。
+      {% endif %}
+    </p>
+  </section>
 {% endblock content %}

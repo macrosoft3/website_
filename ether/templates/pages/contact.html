@@ -9,89 +9,39 @@
 {% block og_description %}
   Ether合同会社へのお問い合わせ先。協業、ソフトウェア開発、取材などの連絡先メールを掲載しています。
 {% endblock og_description %}
-{% block bodyclass %}
-  page-contact
-{% endblock bodyclass %}
 {% block content %}
-  <section class="page-hero compact-hero" aria-labelledby="contact-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Contact</span>
-      </p>
-      <h1 id="contact-page-heading">お問い合わせ</h1>
-      <p>協業、ソフトウェア開発、取材などの連絡はメールで受け付けています。</p>
-    </div>
+  <section>
+    <h1>お問い合わせ</h1>
+    <p>協業、ソフトウェア開発、取材などの連絡はメールで受け付けています。</p>
+    <p>
+      <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
+    </p>
   </section>
-  <section class="section" aria-label="連絡先">
-    <div class="container">
-      <div class="contact-panel" data-reveal>
-        <div>
-          <p class="eyebrow">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Email</span>
-          </p>
-          <h2 class="headline">so.masuda.2003@ether-llc.com</h2>
-          <p>会社の代表メールです。すべてのお問い合わせは、まずこちらのアドレスへお送りください。</p>
-        </div>
-        <div class="callout-actions">
-          <a class="btn btn-outline-light"
-             href="mailto:so.masuda.2003@ether-llc.com">
-            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            <span>メールで問い合わせる</span>
-          </a>
-        </div>
-      </div>
-      <div class="contact-channels" aria-label="用途別の窓口">
-        <article class="contact-channel" data-reveal>
-          <span class="channel-icon" aria-hidden="true">
-            <span class="material-symbols-rounded">handshake</span>
-          </span>
-          <h3>協業・パートナーシップ</h3>
-          <p>Ethereum、ソフトウェア、文化事業に関する共同企画の相談。</p>
-          <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BPartnership%5D%20%E5%8D%94%E6%A5%AD%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
-            <span>メールで問い合わせる</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </article>
-        <article class="contact-channel" data-reveal>
-          <span class="channel-icon" aria-hidden="true">
-            <span class="material-symbols-rounded">code</span>
-          </span>
-          <h3>ソフトウェア開発のご相談</h3>
-          <p>iOS/SwiftUIアプリ、Web3関連の技術検証、ライセンスに関する相談。</p>
-          <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BSoftware%5D%20%E3%81%94%E7%9B%B8%E8%AB%87">
-            <span>メールで問い合わせる</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </article>
-        <article class="contact-channel" data-reveal>
-          <span class="channel-icon" aria-hidden="true">
-            <span class="material-symbols-rounded">campaign</span>
-          </span>
-          <h3>取材・登壇</h3>
-          <p>メディア取材、インタビュー、登壇の依頼。</p>
-          <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BPress%5D%20%E5%8F%96%E6%9D%90%E3%83%BB%E7%99%BB%E5%A3%87%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
-            <span>メールで問い合わせる</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </article>
-        <article class="contact-channel" data-reveal>
-          <span class="channel-icon" aria-hidden="true">
-            <span class="material-symbols-rounded">apartment</span>
-          </span>
-          <h3>会社情報</h3>
-          <p>登記情報・代表者・所在地・法人番号などの基本情報は会社概要ページに掲載しています。</p>
-          <a href="/company/">
-            <span>会社概要を見る</span>
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
-        </article>
-      </div>
-      <p class="contact-note" data-reveal>
-        ご返信には数営業日いただく場合があります。
-        営業を目的とした一斉配信メールへの対応はいたしかねます。
-      </p>
-    </div>
+  <section>
+    <h2>用途別の窓口</h2>
+    <ul>
+      <li>
+        協業・パートナーシップ:
+        <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BPartnership%5D%20%E5%8D%94%E6%A5%AD%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">so.masuda.2003@ether-llc.com</a>
+      </li>
+      <li>
+        ソフトウェア開発:
+        <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BSoftware%5D%20%E3%81%94%E7%9B%B8%E8%AB%87">so.masuda.2003@ether-llc.com</a>
+      </li>
+      <li>
+        取材・登壇:
+        <a href="mailto:so.masuda.2003@ether-llc.com?subject=%5BPress%5D%20%E5%8F%96%E6%9D%90%E3%83%BB%E7%99%BB%E5%A3%87%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">so.masuda.2003@ether-llc.com</a>
+      </li>
+      <li>
+        会社情報:
+        <a href="/company/">会社概要</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <p class="muted">
+      ご返信には数営業日いただく場合があります。
+      営業を目的とした一斉配信メールへの対応はいたしかねます。
+    </p>
   </section>
 {% endblock content %}

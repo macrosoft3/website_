@@ -4,7 +4,6 @@
 <html lang="{{ lang|default:'ja' }}">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>
       {% block title %}
         {% if lang == 'en' %}
@@ -18,7 +17,6 @@
     <meta name="description"
           content="{% block meta_description %}{% if lang == 'en' %}Ether LLC is a Tokyo company focused on Ethereum holdings, software development, and related cultural projects.{% else %}Ether合同会社は、Ethereum保有、ソフトウェア開発、関連する文化事業を行う東京の会社です。{% endif %}{% endblock meta_description %}" />
     <meta name="author" content="Ether LLC" />
-    <meta name="theme-color" content="#00696b" />
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" />
     <link rel="canonical"
           href="https://ether-llc.com{{ request.path|default:'/' }}" />
@@ -37,7 +35,6 @@
           content="{% if lang == 'en' %}en_US{% else %}ja_JP{% endif %}" />
     <meta property="og:url"
           content="https://ether-llc.com{{ request.path|default:'/' }}" />
-    <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -65,270 +62,116 @@
         ]
       }
     </script>
-    {% block css %}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" />
-      <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
-            integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer" />
-      <link href="{% static 'css/project.css' %}" rel="stylesheet" />
-    {% endblock css %}
-    {% block javascript %}
-      <script defer
-              src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
-              integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
-              crossorigin="anonymous"
-              referrerpolicy="no-referrer"></script>
-      <script defer src="{% static 'js/project.js' %}"></script>
-    {% endblock javascript %}
+    <link href="{% static 'css/project.css' %}" rel="stylesheet" />
   </head>
-  <body class="{% block bodyclass %}{% endblock bodyclass %}">
-    {% block body %}
-      <a class="skip-link" href="#main-content">
-        {% if lang == 'en' %}
-          Skip to content
-        {% else %}
-          本文へスキップ
-        {% endif %}
-      </a>
-      <header class="site-header" data-site-header>
-        <nav class="navbar navbar-expand-lg"
-             aria-label="{% if lang == 'en' %}Global navigation{% else %}グローバルナビゲーション{% endif %}">
-          <div class="container">
-            <a class="navbar-brand"
-               href="{% if lang == 'en' %}/en/{% else %}/{% endif %}"
-               aria-label="{% if lang == 'en' %}Ether LLC home{% else %}Ether合同会社 ホーム{% endif %}">
-              <span class="brand-mark" aria-hidden="true">E</span>
-              <span class="brand-name">
+  <body>
+    <a class="skip-link" href="#main-content">
+      {% if lang == 'en' %}
+        Skip to content
+      {% else %}
+        本文へスキップ
+      {% endif %}
+    </a>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="{% if lang == 'en' %}/en/{% else %}/{% endif %}">
+          {% if lang == 'en' %}
+            Ether LLC
+          {% else %}
+            Ether合同会社
+          {% endif %}
+        </a>
+        <nav aria-label="{% if lang == 'en' %}Site navigation{% else %}サイトナビゲーション{% endif %}">
+          <ul>
+            <li>
+              <a href="{% if lang == 'en' %}/en/holdings/{% else %}/holdings/{% endif %}"
+                 class="{% if page_name == 'holdings' %}active{% endif %}">Holdings</a>
+            </li>
+            <li>
+              <a href="{% if lang == 'en' %}/en/software/{% else %}/software/{% endif %}"
+                 class="{% if page_name == 'software' %}active{% endif %}">Software</a>
+            </li>
+            <li>
+              <a href="{% if lang == 'en' %}/en/company/{% else %}/company/{% endif %}"
+                 class="{% if page_name == 'company' %}active{% endif %}">
                 {% if lang == 'en' %}
-                  Ether LLC
+                  Company
                 {% else %}
-                  Ether合同会社
+                  会社概要
                 {% endif %}
-              </span>
-            </a>
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="{% if lang == 'en' %}Toggle navigation{% else %}ナビゲーションを開閉{% endif %}">
-              <span class="material-symbols-rounded" aria-hidden="true">menu</span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto align-items-lg-center">
-                <li class="nav-item">
-                  <a class="nav-link {% if page_name == 'holdings' %}active{% endif %}"
-                     href="{% if lang == 'en' %}/en/holdings/{% else %}/holdings/{% endif %}">
-                    <span>Holdings</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% if page_name == 'software' %}active{% endif %}"
-                     href="{% if lang == 'en' %}/en/software/{% else %}/software/{% endif %}">
-                    <span>Software</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% if page_name == 'company' %}active{% endif %}"
-                     href="{% if lang == 'en' %}/en/company/{% else %}/company/{% endif %}">
-                    <span>
-                      {% if lang == 'en' %}
-                        Company
-                      {% else %}
-                        会社概要
-                      {% endif %}
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item nav-lang" aria-label="Language">
-                  {% if alt_lang_url %}
-                    <a class="nav-link nav-lang-link"
-                       href="{{ alt_lang_url }}"
-                       hreflang="{% if lang == 'en' %}ja{% else %}en{% endif %}">
-                      <span class="material-symbols-rounded" aria-hidden="true">translate</span>
-                      <span>
-                        {% if lang == 'en' %}
-                          日本語
-                        {% else %}
-                          English
-                        {% endif %}
-                      </span>
-                    </a>
-                  {% endif %}
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-filled nav-cta {% if page_name == 'contact' %}active{% endif %}"
-                     href="{% if lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}">
-                    <span>
-                      {% if lang == 'en' %}
-                        Contact
-                      {% else %}
-                        お問い合わせ
-                      {% endif %}
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <main id="main-content">
-        {% if messages %}
-          <div class="container message-container">
-            {% for message in messages %}
-              <div class="alert alert-dismissible {% if message.tags %}alert-{{ message.tags }}{% endif %}">
-                {{ message }}
-                <button type="button"
-                        class="btn-close"
-                        data-bs-dismiss="alert"
-                        aria-label="{% if lang == 'en' %}Close{% else %}閉じる{% endif %}"></button>
-              </div>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% block main %}
-          {% block content %}
-          {% endblock content %}
-        {% endblock main %}
-      </main>
-      <footer class="site-footer">
-        <div class="container footer-grid">
-          <div class="footer-brand-block">
-            <a class="footer-brand"
-               href="{% if lang == 'en' %}/en/{% else %}/{% endif %}">
-              <span class="brand-mark" aria-hidden="true">E</span>
-              <span>
+              </a>
+            </li>
+            <li>
+              <a href="{% if lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}"
+                 class="{% if page_name == 'contact' %}active{% endif %}">
                 {% if lang == 'en' %}
-                  Ether LLC
+                  Contact
                 {% else %}
-                  Ether合同会社
+                  お問い合わせ
                 {% endif %}
-              </span>
-            </a>
-            <p>
-              {% if lang == 'en' %}
-                Ethereum-native holding company. Software, culture and Web3 from Tokyo.
-              {% else %}
-                Ethereumを基軸とするホールディング。ソフトウェア、文化、Web3を東京から。
-              {% endif %}
-            </p>
-          </div>
-          <nav class="footer-nav"
-               aria-label="{% if lang == 'en' %}Site{% else %}サイト{% endif %}">
-            <h2 class="footer-heading">
-              {% if lang == 'en' %}
-                Site
-              {% else %}
-                サイト
-              {% endif %}
-            </h2>
-            <ul>
+              </a>
+            </li>
+            {% if alt_lang_url %}
               <li>
-                <a href="{% if lang == 'en' %}/en/vision/{% else %}/vision/{% endif %}">Vision</a>
-              </li>
-              <li>
-                <a href="{% if lang == 'en' %}/en/holdings/{% else %}/holdings/{% endif %}">Holdings</a>
-              </li>
-              <li>
-                <a href="{% if lang == 'en' %}/en/software/{% else %}/software/{% endif %}">Software</a>
-              </li>
-              <li>
-                <a href="{% if lang == 'en' %}/en/business/{% else %}/business/{% endif %}">
+                <a href="{{ alt_lang_url }}"
+                   hreflang="{% if lang == 'en' %}ja{% else %}en{% endif %}">
                   {% if lang == 'en' %}
-                    Business
+                    日本語
                   {% else %}
-                    事業内容
+                    English
                   {% endif %}
                 </a>
               </li>
-              <li>
-                <a href="{% if lang == 'en' %}/en/company/{% else %}/company/{% endif %}">
-                  {% if lang == 'en' %}
-                    Company
-                  {% else %}
-                    会社概要
-                  {% endif %}
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav"
-               aria-label="{% if lang == 'en' %}Contact{% else %}コンタクト{% endif %}">
-            <h2 class="footer-heading">
-              {% if lang == 'en' %}
-                Contact
-              {% else %}
-                コンタクト
-              {% endif %}
-            </h2>
-            <ul>
-              <li>
-                <a href="{% if lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}">
-                  {% if lang == 'en' %}
-                    Contact form
-                  {% else %}
-                    お問い合わせ
-                  {% endif %}
-                </a>
-              </li>
-              <li>
-                <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav"
-               aria-label="{% if lang == 'en' %}Legal{% else %}法務{% endif %}">
-            <h2 class="footer-heading">
-              {% if lang == 'en' %}
-                Legal
-              {% else %}
-                法務
-              {% endif %}
-            </h2>
-            <ul>
-              <li>
-                <a href="{% if lang == 'en' %}/en/legal/privacy/{% else %}/legal/privacy/{% endif %}">
-                  {% if lang == 'en' %}
-                    Privacy Policy
-                  {% else %}
-                    プライバシーポリシー
-                  {% endif %}
-                </a>
-              </li>
-              <li>
-                <a href="{% if lang == 'en' %}/en/legal/cookies/{% else %}/legal/cookies/{% endif %}">
-                  {% if lang == 'en' %}
-                    Cookie Policy
-                  {% else %}
-                    クッキーポリシー
-                  {% endif %}
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="container footer-meta">
-          <small>© {% now "Y" %} Ether合同会社 / Ether LLC</small>
-          <small>
-            {% if lang == 'en' %}
-              Tokyo, Japan
-            {% else %}
-              東京・新宿
             {% endif %}
-          </small>
-        </div>
-      </footer>
-    {% endblock body %}
-    {% block modal %}
-    {% endblock modal %}
-    {% block inline_javascript %}
-    {% endblock inline_javascript %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <div class="container">
+        {% block content %}
+        {% endblock content %}
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <small>© {% now "Y" %} Ether合同会社 / Ether LLC</small>
+        <ul>
+          <li>
+            <a href="{% if lang == 'en' %}/en/vision/{% else %}/vision/{% endif %}">Vision</a>
+          </li>
+          <li>
+            <a href="{% if lang == 'en' %}/en/business/{% else %}/business/{% endif %}">
+              {% if lang == 'en' %}
+                Business
+              {% else %}
+                事業内容
+              {% endif %}
+            </a>
+          </li>
+          <li>
+            <a href="{% if lang == 'en' %}/en/legal/privacy/{% else %}/legal/privacy/{% endif %}">
+              {% if lang == 'en' %}
+                Privacy
+              {% else %}
+                プライバシー
+              {% endif %}
+            </a>
+          </li>
+          <li>
+            <a href="{% if lang == 'en' %}/en/legal/cookies/{% else %}/legal/cookies/{% endif %}">
+              {% if lang == 'en' %}
+                Cookies
+              {% else %}
+                クッキー
+              {% endif %}
+            </a>
+          </li>
+          <li>
+            <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

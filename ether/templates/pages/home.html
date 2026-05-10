@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Ether合同会社 | Ethereumとソフトウェアの会社
+  Ether合同会社
 {% endblock title %}
 {% block meta_description %}
   Ether合同会社は、Ethereum保有、ソフトウェア開発、関連する文化事業を行う東京の会社です。
@@ -12,94 +12,53 @@
 {% block og_description %}
   Ethereum保有、ソフトウェア開発、関連する文化事業を行う東京の会社です。
 {% endblock og_description %}
-{% block bodyclass %}
-  page-home
-{% endblock bodyclass %}
 {% block content %}
-  <section class="hero-section" aria-labelledby="hero-heading">
-    <div class="container">
-      <div class="hero-content">
-        <h1 id="hero-heading">Ether合同会社は、Ethereumとソフトウェアの会社です。</h1>
-        <p class="hero-lead">東京を拠点に、Ethereumの長期保有、ソフトウェア開発、関連する文化事業を行っています。</p>
-        <div class="hero-actions">
-          <a class="btn btn-filled" href="/contact/">お問い合わせ</a>
-          <a class="btn btn-outline-light" href="/company/">会社情報</a>
-        </div>
-      </div>
-    </div>
+  <section>
+    <h1>Ether合同会社</h1>
+    <p>
+      Ether合同会社は、東京を拠点に、Ethereumの長期保有、ソフトウェア開発、
+      関連する文化事業を行う会社です。
+    </p>
   </section>
-  <section class="section simple-section" aria-labelledby="overview-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">概要</p>
-        <h2 id="overview-heading">事業の中心</h2>
-      </div>
-      <div>
-        <p>
-          Ether合同会社は、Ethereumを会社の基軸資産として保有し、iOSアプリを中心とした
-          ソフトウェアを開発しています。活動内容は、このサイトで公開できる範囲に絞って掲載します。
-        </p>
-        <a class="text-link" href="/holdings/">Ethereum保有方針</a>
-      </div>
-    </div>
+  <section>
+    <h2>事業</h2>
+    <ul>
+      <li>
+        <a href="/holdings/">Ethereum保有</a>
+      </li>
+      <li>
+        <a href="/software/">ソフトウェア開発</a>
+      </li>
+      <li>関連する文化事業</li>
+    </ul>
   </section>
-  <section class="section simple-section" aria-labelledby="business-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">事業</p>
-        <h2 id="business-heading">現在の活動</h2>
-      </div>
-      <div>
-        <ul class="plain-list">
-          <li>Ethereum保有</li>
-          <li>ソフトウェア開発</li>
-          <li>関連する文化事業</li>
-        </ul>
-        <a class="text-link" href="/software/">ソフトウェアを見る</a>
-      </div>
-    </div>
+  <section>
+    <h2>会社情報</h2>
+    <dl>
+      <dt>商号</dt>
+      <dd>
+        Ether合同会社
+      </dd>
+      <dt>所在地</dt>
+      <dd>
+        東京都新宿区
+      </dd>
+      <dt>法人番号</dt>
+      <dd>
+        4011103016903
+      </dd>
+    </dl>
+    <p>
+      <a href="/company/">会社概要</a>
+    </p>
   </section>
-  <section class="section simple-section" aria-labelledby="company-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">会社情報</p>
-        <h2 id="company-heading">公開情報</h2>
-      </div>
-      <div>
-        <dl class="fact-list compact">
-          <div>
-            <dt>商号</dt>
-            <dd>
-              Ether合同会社
-            </dd>
-          </div>
-          <div>
-            <dt>所在地</dt>
-            <dd>
-              東京都新宿区
-            </dd>
-          </div>
-          <div>
-            <dt>法人番号</dt>
-            <dd>
-              4011103016903
-            </dd>
-          </div>
-        </dl>
-        <a class="text-link" href="/company/">会社情報を見る</a>
-      </div>
-    </div>
-  </section>
-  <section class="section simple-section" aria-labelledby="contact-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">問い合わせ</p>
-        <h2 id="contact-heading">連絡先</h2>
-      </div>
-      <div>
-        <p>協業、ソフトウェア開発、取材などの連絡はメールで受け付けています。</p>
-        <a class="btn btn-filled" href="/contact/">お問い合わせ</a>
-      </div>
-    </div>
+  <section>
+    <h2>連絡先</h2>
+    <p>
+      <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
+    </p>
+    <p>
+      <a href="/contact/">お問い合わせ</a>
+    </p>
   </section>
 {% endblock content %}
