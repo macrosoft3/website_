@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Ether LLC | Ethereum and software company
+  Ether LLC
 {% endblock title %}
 {% block meta_description %}
   Ether LLC is a Tokyo company focused on Ethereum holdings, software development, and related cultural projects.
@@ -12,96 +12,53 @@
 {% block og_description %}
   Ethereum holdings, software development, and related cultural projects from Tokyo.
 {% endblock og_description %}
-{% block bodyclass %}
-  page-home
-{% endblock bodyclass %}
 {% block content %}
-  <section class="hero-section" aria-labelledby="hero-heading">
-    <div class="container">
-      <div class="hero-content">
-        <h1 id="hero-heading">Ether LLC is an Ethereum and software company.</h1>
-        <p class="hero-lead">
-          Based in Tokyo, we hold Ethereum for the long term, build software, and operate related cultural projects.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-filled" href="/en/contact/">Contact</a>
-          <a class="btn btn-outline-light" href="/en/company/">Company</a>
-        </div>
-      </div>
-    </div>
+  <section>
+    <h1>Ether LLC</h1>
+    <p>
+      Ether LLC is a Tokyo company that holds Ethereum for the long term,
+      develops software, and operates related cultural projects.
+    </p>
   </section>
-  <section class="section simple-section" aria-labelledby="overview-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">Overview</p>
-        <h2 id="overview-heading">Core business</h2>
-      </div>
-      <div>
-        <p>
-          Ether LLC holds Ethereum as a corporate reserve and develops software, primarily iOS apps.
-          This site lists the information we can publicly disclose.
-        </p>
-        <a class="text-link" href="/en/holdings/">Ethereum holding policy</a>
-      </div>
-    </div>
+  <section>
+    <h2>Business</h2>
+    <ul>
+      <li>
+        <a href="/en/holdings/">Ethereum holdings</a>
+      </li>
+      <li>
+        <a href="/en/software/">Software development</a>
+      </li>
+      <li>Related cultural projects</li>
+    </ul>
   </section>
-  <section class="section simple-section" aria-labelledby="business-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">Business</p>
-        <h2 id="business-heading">Current work</h2>
-      </div>
-      <div>
-        <ul class="plain-list">
-          <li>Ethereum holdings</li>
-          <li>Software development</li>
-          <li>Related cultural projects</li>
-        </ul>
-        <a class="text-link" href="/en/software/">See software</a>
-      </div>
-    </div>
+  <section>
+    <h2>Company</h2>
+    <dl>
+      <dt>Legal name</dt>
+      <dd>
+        Ether合同会社 (Ether LLC)
+      </dd>
+      <dt>Office</dt>
+      <dd>
+        Shinjuku-ku, Tokyo
+      </dd>
+      <dt>Corporate number</dt>
+      <dd>
+        4011103016903
+      </dd>
+    </dl>
+    <p>
+      <a href="/en/company/">Company facts</a>
+    </p>
   </section>
-  <section class="section simple-section" aria-labelledby="company-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">Company</p>
-        <h2 id="company-heading">Public facts</h2>
-      </div>
-      <div>
-        <dl class="fact-list compact">
-          <div>
-            <dt>Legal name</dt>
-            <dd>
-              Ether合同会社 (Ether LLC)
-            </dd>
-          </div>
-          <div>
-            <dt>Office</dt>
-            <dd>
-              Shinjuku-ku, Tokyo
-            </dd>
-          </div>
-          <div>
-            <dt>Corporate number</dt>
-            <dd>
-              4011103016903
-            </dd>
-          </div>
-        </dl>
-        <a class="text-link" href="/en/company/">See company facts</a>
-      </div>
-    </div>
-  </section>
-  <section class="section simple-section" aria-labelledby="contact-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">Contact</p>
-        <h2 id="contact-heading">Contact us</h2>
-      </div>
-      <div>
-        <p>For partnerships, software work, and press inquiries, contact us by email.</p>
-        <a class="btn btn-filled" href="/en/contact/">Contact</a>
-      </div>
-    </div>
+  <section>
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
+    </p>
+    <p>
+      <a href="/en/contact/">Contact</a>
+    </p>
   </section>
 {% endblock content %}
