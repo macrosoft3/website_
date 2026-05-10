@@ -9,72 +9,38 @@
 {% block og_description %}
   Ether合同会社のソフトウェア開発。iOSアプリ GratefulMoments の概要、技術スタック、ライセンス、公開状況を掲載しています。
 {% endblock og_description %}
-{% block bodyclass %}
-  page-software
-{% endblock bodyclass %}
 {% block content %}
-  <section class="page-hero compact-hero"
-           aria-labelledby="software-page-heading">
-    <div class="container">
-      <p class="section-label">Software</p>
-      <h1 id="software-page-heading">ソフトウェア開発</h1>
-      <p>Ether合同会社は、iOSアプリを中心にソフトウェアを開発しています。</p>
-    </div>
+  <section>
+    <h1>ソフトウェア開発</h1>
+    <p>Ether合同会社は、iOSアプリを中心にソフトウェアを開発しています。</p>
   </section>
-  <section class="section" aria-labelledby="product-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">Product</p>
-        <h2 id="product-heading">GratefulMoments</h2>
-      </div>
-      <div>
-        <p>
-          GratefulMomentsは、日々の感謝を記録するiOSアプリです。
-          タイトル、メモ、写真でできごとを保存し、習慣化を支援します。
-        </p>
-        <dl class="fact-list compact">
-          <div>
-            <dt>プラットフォーム</dt>
-            <dd>
-              iOS
-            </dd>
-          </div>
-          <div>
-            <dt>技術</dt>
-            <dd>
-              Swift / SwiftUI / SwiftData / PhotosUI
-            </dd>
-          </div>
-          <div>
-            <dt>ライセンス</dt>
-            <dd>
-              Apache License 2.0
-            </dd>
-          </div>
-          <div>
-            <dt>状態</dt>
-            <dd>
-              開発中 / App Store公開準備中
-            </dd>
-          </div>
-        </dl>
-        <a class="text-link"
-           href="https://github.com/masuda-so/GratefulMoments"
+  <section>
+    <h2>GratefulMoments</h2>
+    <p>
+      日々の感謝を記録するiOSアプリ。タイトル、メモ、写真でできごとを保存します。
+    </p>
+    <dl>
+      <dt>プラットフォーム</dt>
+      <dd>iOS</dd>
+      <dt>技術</dt>
+      <dd>Swift / SwiftUI / SwiftData / PhotosUI</dd>
+      <dt>ライセンス</dt>
+      <dd>Apache License 2.0</dd>
+      <dt>状態</dt>
+      <dd>開発中 / App Store公開準備中</dd>
+      <dt>リポジトリ</dt>
+      <dd>
+        <a href="https://github.com/masuda-so/GratefulMoments"
            rel="noopener noreferrer"
-           target="_blank">GitHubで見る</a>
-      </div>
-    </div>
+           target="_blank">github.com/masuda-so/GratefulMoments</a>
+      </dd>
+    </dl>
   </section>
-  <section class="section simple-section" aria-labelledby="contact-heading">
-    <div class="container simple-layout">
-      <div>
-        <p class="section-label">Contact</p>
-        <h2 id="contact-heading">開発の相談</h2>
-      </div>
-      <div>
-        <p>SwiftUI、iOSアプリ、Web3関連の相談はメールで受け付けています。</p>
-        <a class="btn btn-filled" href="/contact/">お問い合わせ</a>
-      </div>
-    </div>
+  <section>
+    <h2>開発の相談</h2>
+    <p>
+      SwiftUI、iOSアプリ、Web3関連の相談はメールで受け付けています。
+      <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
+    </p>
   </section>
 {% endblock content %}

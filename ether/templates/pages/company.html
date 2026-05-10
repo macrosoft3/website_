@@ -9,137 +9,48 @@
 {% block og_description %}
   Ether合同会社の商号、代表者、所在地、法人番号、事業年度、連絡先などの公開情報です。
 {% endblock og_description %}
-{% block bodyclass %}
-  page-company
-{% endblock bodyclass %}
 {% block content %}
-  <section class="page-hero compact-hero" aria-labelledby="company-page-heading">
-    <div class="container" data-reveal>
-      <p class="eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Company</span>
-      </p>
-      <h1 id="company-page-heading">会社概要</h1>
-      <p>商号、代表者、所在地、法人番号などの公開情報です。</p>
-    </div>
+  <section>
+    <h1>会社概要</h1>
+    <dl>
+      <dt>商号</dt>
+      <dd>Ether合同会社 (Ether LLC)</dd>
+      <dt>代表社員</dt>
+      <dd>増田 創 (Soh Masuda)</dd>
+      <dt>本店所在地</dt>
+      <dd>〒160-0022 東京都新宿区新宿四丁目3番15号</dd>
+      <dt>設立年月日</dt>
+      <dd>令和7年12月22日 (2025-12-22)</dd>
+      <dt>資本金</dt>
+      <dd>1円</dd>
+      <dt>法人番号</dt>
+      <dd>
+        <a href="https://www.houjin-bangou.nta.go.jp/henkorireki-johoSearch?selHouzinNo=4011103016903"
+           rel="noopener noreferrer"
+           target="_blank">4011103016903</a>
+      </dd>
+      <dt>事業年度</dt>
+      <dd>毎年4月1日から翌年3月31日まで</dd>
+      <dt>公告の方法</dt>
+      <dd>官報に掲載</dd>
+      <dt>基軸資産</dt>
+      <dd>Ethereum (ETH) — <a href="/holdings/">Holdings</a></dd>
+      <dt>連絡先</dt>
+      <dd>
+        <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
+      </dd>
+      <dt>関連リンク</dt>
+      <dd>
+        <a href="https://github.com/masuda-so"
+           rel="noopener noreferrer"
+           target="_blank">GitHub: masuda-so</a>
+      </dd>
+    </dl>
   </section>
-  <section class="section" aria-label="会社情報">
-    <div class="container company-panel" data-reveal>
-      <dl class="company-list">
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">domain</span>
-            商号
-          </dt>
-          <dd>
-            Ether合同会社 (Ether LLC)
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">badge</span>
-            代表社員 / 業務執行社員
-          </dt>
-          <dd>
-            増田 創 (Soh Masuda)
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
-            本店所在地
-          </dt>
-          <dd>
-            〒160-0022 東京都新宿区新宿四丁目3番15号
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">event</span>
-            設立年月日
-          </dt>
-          <dd>
-            令和7年12月22日 (2025-12-22)
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">savings</span>
-            資本金
-          </dt>
-          <dd>
-            1円
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">tag</span>
-            法人番号
-          </dt>
-          <dd>
-            <a href="https://www.houjin-bangou.nta.go.jp/henkorireki-johoSearch?selHouzinNo=4011103016903"
-               rel="noopener noreferrer"
-               target="_blank">4011103016903</a>
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
-            事業年度
-          </dt>
-          <dd>
-            毎年4月1日から翌年3月31日まで
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">campaign</span>
-            公告の方法
-          </dt>
-          <dd>
-            官報に掲載
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">database</span>
-            基軸資産
-          </dt>
-          <dd>
-            Ethereum (ETH) — 詳細は<a href="/holdings/">Holdings</a>
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-            連絡先
-          </dt>
-          <dd>
-            <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
-          </dd>
-        </div>
-        <div>
-          <dt>
-            <span class="material-symbols-rounded" aria-hidden="true">link</span>
-            関連リンク
-          </dt>
-          <dd>
-            <a href="https://github.com/masuda-so"
-               rel="noopener noreferrer"
-               target="_blank">GitHub: masuda-so</a>
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-  <section class="section section-muted" aria-labelledby="purposes-heading">
-    <div class="container narrow-prose">
-      <article class="prose" data-reveal>
-        <h2 id="purposes-heading">事業目的</h2>
-        <p>
-          定款上の事業目的は、領域別に<a href="/business/">事業内容</a>のページで掲載しています。
-        </p>
-      </article>
-    </div>
+  <section>
+    <h2>事業目的</h2>
+    <p>
+      定款上の事業目的は、領域別に <a href="/business/">事業内容</a> のページに掲載しています。
+    </p>
   </section>
 {% endblock content %}
