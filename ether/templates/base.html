@@ -85,15 +85,18 @@
           <ul>
             <li>
               <a href="{% if lang == 'en' %}/en/holdings/{% else %}/holdings/{% endif %}"
-                 class="{% if page_name == 'holdings' %}active{% endif %}">Holdings</a>
+                 class="{% if page_name == 'holdings' %}active{% endif %}"
+                 {% if page_name == 'holdings' %}aria-current="page"{% endif %}>Holdings</a>
             </li>
             <li>
               <a href="{% if lang == 'en' %}/en/software/{% else %}/software/{% endif %}"
-                 class="{% if page_name == 'software' %}active{% endif %}">Software</a>
+                 class="{% if page_name == 'software' %}active{% endif %}"
+                 {% if page_name == 'software' %}aria-current="page"{% endif %}>Software</a>
             </li>
             <li>
               <a href="{% if lang == 'en' %}/en/company/{% else %}/company/{% endif %}"
-                 class="{% if page_name == 'company' %}active{% endif %}">
+                 class="{% if page_name == 'company' %}active{% endif %}"
+                 {% if page_name == 'company' %}aria-current="page"{% endif %}>
                 {% if lang == 'en' %}
                   Company
                 {% else %}
@@ -103,7 +106,8 @@
             </li>
             <li>
               <a href="{% if lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}"
-                 class="{% if page_name == 'contact' %}active{% endif %}">
+                 class="{% if page_name == 'contact' %}active{% endif %}"
+                 {% if page_name == 'contact' %}aria-current="page"{% endif %}>
                 {% if lang == 'en' %}
                   Contact
                 {% else %}
