@@ -37,6 +37,12 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    # ⚡ Bolt: Compress responses to reduce bandwidth usage.
+    # Expected impact: ~60-70% reduction in HTML payload size.
+    "django.middleware.gzip.GZipMiddleware",
+    # ⚡ Bolt: Support ETag/Last-Modified for conditional GET requests.
+    # Expected impact: Faster repeat visits by allowing 304 Not Modified responses.
+    "django.middleware.http.ConditionalGetMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
