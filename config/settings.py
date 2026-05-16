@@ -17,6 +17,21 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
 
+# Security settings for production
+# https://docs.djangoproject.com/en/stable/howto/deployment/checklist/
+IS_PRODUCTION = os.environ.get("DJANGO_PRODUCTION") == "1"
+
+if IS_PRODUCTION:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    X_FRAME_OPTIONS = "DENY"
+
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
