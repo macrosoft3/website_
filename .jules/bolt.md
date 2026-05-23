@@ -1,0 +1,3 @@
+## 2025-05-23 - [Optimization via Middleware]
+**Learning:** Combining `GZipMiddleware` and `ConditionalGetMiddleware` provides a significant boost for static-heavy Django sites. `GZipMiddleware` should be high in the stack (near `SecurityMiddleware`) to compress the final response, while `ConditionalGetMiddleware` works best when placed after `CommonMiddleware` to correctly handle ETags.
+**Action:** Always verify the middleware order when adding response-transforming middlewares to ensure they interact correctly and maximize performance gains (e.g., ETags reducing bandwidth, GZip reducing transfer size).
