@@ -9,6 +9,9 @@
 {% block og_description %}
   Public facts about Ether LLC, including legal name, representative, office, corporate number, fiscal year, and contact address.
 {% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="Company facts" %}
+{% endblock breadcrumb %}
 {% block content %}
   <section>
     <h1>Company facts</h1>
