@@ -13,27 +13,96 @@
   Ethereum holdings, software development, and related cultural projects from Tokyo.
 {% endblock og_description %}
 {% block content %}
-  <section>
+  <section class="home-intro">
     <h1>Ether LLC</h1>
-    <p>
-      Ether LLC is a Tokyo company that holds Ethereum for the long term,
-      develops software, and operates related cultural projects.
+    <p class="lead">
+      A Tokyo company focused on software and operations that are easy to understand,
+      accessible, and steady over time. We work on long-term Ethereum holdings,
+      software development, and related cultural projects.
     </p>
+    <div class="audience-grid" aria-label="Audience menu">
+      <a href="/en/software/">
+        <span>For service visitors</span>
+        <small>View current software work</small>
+      </a>
+      <a href="/en/business/">
+        <span>For partners</span>
+        <small>View business areas</small>
+      </a>
+      <a href="/en/contact/">
+        <span>Share your voice</span>
+        <small>Send inquiries or feedback</small>
+      </a>
+    </div>
   </section>
-  <section>
-    <h2>Business</h2>
-    <ul>
+  <section class="notice-section" aria-labelledby="important-notices">
+    <div class="section-heading">
+      <h2 id="important-notices">Important Notices</h2>
+    </div>
+    <ul class="link-list">
       <li>
-        <a href="/en/holdings/">Ethereum holdings</a>
+        <a href="/en/holdings/">Ethereum holding policy and no investment solicitation notice</a>
       </li>
       <li>
-        <a href="/en/software/">Software development</a>
+        <a href="/en/business/">Charter-based business purposes and currently active areas</a>
       </li>
-      <li>Related cultural projects</li>
+      <li>
+        <a href="/en/contact/">Inquiries, partnership discussions, and site feedback</a>
+      </li>
     </ul>
   </section>
-  <section>
-    <h2>Company</h2>
+  <section aria-labelledby="topics">
+    <div class="section-heading">
+      <h2 id="topics">Topics</h2>
+      <a class="section-link" href="/en/vision/">View policy</a>
+    </div>
+    <div class="topic-grid">
+      <article class="resource-card resource-card-featured">
+        <p class="meta-label">User-centered</p>
+        <h3>Listen, clarify, and improve in small steps</h3>
+        <p>We treat needs, friction, and expectations as input for services that keep getting easier to use.</p>
+      </article>
+      <article class="resource-card">
+        <p class="meta-label">Software</p>
+        <h3>GratefulMoments</h3>
+        <p>An iOS gratitude journal developed from the user's experience outward.</p>
+        <a href="/en/software/">Learn more</a>
+      </article>
+      <article class="resource-card">
+        <p class="meta-label">Public facts</p>
+        <h3>Company facts</h3>
+        <p>Legal name, office, corporate number, contact address, and related public information.</p>
+        <a href="/en/company/">View organization</a>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="services">
+    <div class="section-heading">
+      <h2 id="services">Services &amp; Activities</h2>
+      <a class="section-link" href="/en/business/">View all</a>
+    </div>
+    <div class="service-grid">
+      <article>
+        <h3>Ethereum holdings</h3>
+        <p>ETH is managed as a long-term corporate reserve asset funded by the company.</p>
+        <a href="/en/holdings/">View holding policy</a>
+      </article>
+      <article>
+        <h3>Software development</h3>
+        <p>We design and build software, primarily iOS apps, from the user's experience outward.</p>
+        <a href="/en/software/">View software work</a>
+      </article>
+      <article>
+        <h3>Cultural projects</h3>
+        <p>We publish activity as it becomes ready to share and grow durable cultural projects over time.</p>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="organization">
+    <div class="section-heading">
+      <h2 id="organization">Organization</h2>
+      <a class="section-link" href="/en/company/">Learn more</a>
+    </div>
     <dl>
       <dt>Legal name</dt>
       <dd>
@@ -48,17 +117,15 @@
         4011103016903
       </dd>
     </dl>
-    <p>
-      <a href="/en/company/">Company facts</a>
-    </p>
   </section>
-  <section>
-    <h2>Contact</h2>
+  <section class="feedback-section" aria-labelledby="feedback">
+    <div>
+      <h2 id="feedback">Share Your Voice</h2>
+      <p>We welcome notes about usability, collaboration, or anything on the site that could be clearer.</p>
+    </div>
     <p>
-      <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
-    </p>
-    <p>
-      <a href="/en/contact/">Contact</a>
+      <a class="button button-primary"
+         href="mailto:so.masuda.2003@ether-llc.com?subject=%5BFeedback%5D%20Website%20or%20service%20feedback">Send feedback</a>
     </p>
   </section>
 {% endblock content %}

@@ -84,20 +84,42 @@
         <nav aria-label="{% if lang == 'en' %}Site navigation{% else %}サイトナビゲーション{% endif %}">
           <ul>
             <li>
+              <a href="{% if lang == 'en' %}/en/business/{% else %}/business/{% endif %}"
+                 class="{% if page_name == 'business' %}active{% endif %}">
+                {% if lang == 'en' %}
+                  Business
+                {% else %}
+                  事業内容
+                {% endif %}
+              </a>
+            </li>
+            <li>
               <a href="{% if lang == 'en' %}/en/holdings/{% else %}/holdings/{% endif %}"
-                 class="{% if page_name == 'holdings' %}active{% endif %}">Holdings</a>
+                 class="{% if page_name == 'holdings' %}active{% endif %}">
+                {% if lang == 'en' %}
+                  Policy
+                {% else %}
+                  保有方針
+                {% endif %}
+              </a>
             </li>
             <li>
               <a href="{% if lang == 'en' %}/en/software/{% else %}/software/{% endif %}"
-                 class="{% if page_name == 'software' %}active{% endif %}">Software</a>
+                 class="{% if page_name == 'software' %}active{% endif %}">
+                {% if lang == 'en' %}
+                  Services
+                {% else %}
+                  サービス
+                {% endif %}
+              </a>
             </li>
             <li>
               <a href="{% if lang == 'en' %}/en/company/{% else %}/company/{% endif %}"
                  class="{% if page_name == 'company' %}active{% endif %}">
                 {% if lang == 'en' %}
-                  Company
+                  Organization
                 {% else %}
-                  会社概要
+                  組織情報
                 {% endif %}
               </a>
             </li>
@@ -105,9 +127,9 @@
               <a href="{% if lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}"
                  class="{% if page_name == 'contact' %}active{% endif %}">
                 {% if lang == 'en' %}
-                  Contact
+                  Feedback
                 {% else %}
-                  お問い合わせ
+                  声を届ける
                 {% endif %}
               </a>
             </li>
