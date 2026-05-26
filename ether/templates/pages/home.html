@@ -13,27 +13,95 @@
   Ethereum保有、ソフトウェア開発、関連する文化事業を行う東京の会社です。
 {% endblock og_description %}
 {% block content %}
-  <section>
+  <section class="home-intro">
     <h1>Ether合同会社</h1>
-    <p>
-      Ether合同会社は、東京を拠点に、Ethereumの長期保有、ソフトウェア開発、
-      関連する文化事業を行う会社です。
+    <p class="lead">
+      誰にでも使いやすく、長く安心して使えるソフトウェアと事業運営を大切にする東京の会社です。
+      Ethereumの長期保有、ソフトウェア開発、関連する文化事業に取り組んでいます。
     </p>
+    <div class="audience-grid" aria-label="目的別メニュー">
+      <a href="/software/">
+        <span>サービスを知りたい方</span>
+        <small>開発中のソフトウェアを見る</small>
+      </a>
+      <a href="/business/">
+        <span>協業・事業者の方</span>
+        <small>事業領域と活動範囲を見る</small>
+      </a>
+      <a href="/contact/">
+        <span>声を届けたい方</span>
+        <small>相談、質問、フィードバック</small>
+      </a>
+    </div>
   </section>
-  <section>
-    <h2>事業</h2>
-    <ul>
+  <section class="notice-section" aria-labelledby="important-notices">
+    <div class="section-heading">
+      <h2 id="important-notices">重要なお知らせ</h2>
+    </div>
+    <ul class="link-list">
       <li>
-        <a href="/holdings/">Ethereum保有</a>
+        <a href="/holdings/">Ethereum保有方針と、投資勧誘ではない旨について</a>
       </li>
       <li>
-        <a href="/software/">ソフトウェア開発</a>
+        <a href="/business/">定款に基づく事業目的と現在活動中の領域について</a>
       </li>
-      <li>関連する文化事業</li>
+      <li>
+        <a href="/contact/">お問い合わせ、協業相談、サイト改善のご意見について</a>
+      </li>
     </ul>
   </section>
-  <section>
-    <h2>会社情報</h2>
+  <section aria-labelledby="topics">
+    <div class="section-heading">
+      <h2 id="topics">トピックス</h2>
+      <a class="section-link" href="/vision/">方針を見る</a>
+    </div>
+    <div class="topic-grid">
+      <article class="resource-card resource-card-featured">
+        <p class="meta-label">利用者視点</p>
+        <h3>声を聞き、整理し、小さく改善する</h3>
+        <p>困りごとや期待を受け止め、使いやすさを確認しながらサービスを継続的に整えます。</p>
+      </article>
+      <article class="resource-card">
+        <p class="meta-label">ソフトウェア</p>
+        <h3>GratefulMoments</h3>
+        <p>日々の感謝を記録するiOSアプリを、利用者の体験を起点に開発しています。</p>
+        <a href="/software/">詳しく見る</a>
+      </article>
+      <article class="resource-card">
+        <p class="meta-label">公開情報</p>
+        <h3>会社概要</h3>
+        <p>商号、所在地、法人番号、連絡先などの基本情報を掲載しています。</p>
+        <a href="/company/">組織情報を見る</a>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="services">
+    <div class="section-heading">
+      <h2 id="services">サービス・活動</h2>
+      <a class="section-link" href="/business/">一覧を見る</a>
+    </div>
+    <div class="service-grid">
+      <article>
+        <h3>Ethereum保有</h3>
+        <p>自己資金による長期保有を前提に、会社の基軸資産として管理します。</p>
+        <a href="/holdings/">保有方針を見る</a>
+      </article>
+      <article>
+        <h3>ソフトウェア開発</h3>
+        <p>利用者の体験を起点に、iOSアプリを中心としたソフトウェアを設計・開発します。</p>
+        <a href="/software/">開発内容を見る</a>
+      </article>
+      <article>
+        <h3>文化事業</h3>
+        <p>公開できる活動から順に掲載し、長く残る文化的な取り組みを育てます。</p>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="organization">
+    <div class="section-heading">
+      <h2 id="organization">組織情報</h2>
+      <a class="section-link" href="/company/">詳しく見る</a>
+    </div>
     <dl>
       <dt>商号</dt>
       <dd>
@@ -48,17 +116,18 @@
         4011103016903
       </dd>
     </dl>
-    <p>
-      <a href="/company/">会社概要</a>
-    </p>
   </section>
-  <section>
-    <h2>連絡先</h2>
+  <section class="feedback-section" aria-labelledby="feedback">
+    <div>
+      <h2 id="feedback">声を届ける</h2>
+      <p>
+        サービスの使いやすさ、協業のご相談、掲載内容のわかりにくさなど、
+        小さな気づきも歓迎しています。
+      </p>
+    </div>
     <p>
-      <a href="mailto:so.masuda.2003@ether-llc.com">so.masuda.2003@ether-llc.com</a>
-    </p>
-    <p>
-      <a href="/contact/">お問い合わせ</a>
+      <a class="button button-primary"
+         href="mailto:so.masuda.2003@ether-llc.com?subject=%5BFeedback%5D%20%E3%82%B5%E3%82%A4%E3%83%88%E3%83%BB%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E3%81%94%E6%84%8F%E8%A6%8B">ご意見・ご要望を送る</a>
     </p>
   </section>
 {% endblock content %}
