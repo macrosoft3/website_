@@ -9,6 +9,9 @@
 {% block og_description %}
   Ether合同会社へのお問い合わせ先。協業、ソフトウェア開発、取材などの連絡先メールを掲載しています。
 {% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="お問い合わせ" %}
+{% endblock breadcrumb %}
 {% block content %}
   <section>
     <h1>お問い合わせ</h1>
