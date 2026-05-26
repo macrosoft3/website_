@@ -30,6 +30,7 @@ dev = [
 extend-exclude = [
   "*/migrations/*.py",
   "staticfiles/*",
+  "tmp/*",
 ]
 lint.select = [
   "A",
