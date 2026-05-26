@@ -9,6 +9,9 @@
 {% block og_description %}
   Ether合同会社の商号、代表者、所在地、法人番号、事業年度、連絡先などの公開情報です。
 {% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="組織情報" %}
+{% endblock breadcrumb %}
 {% block content %}
   <section>
     <h1>会社概要</h1>

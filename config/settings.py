@@ -6,16 +6,20 @@ to find the WSGI entrypoint and the configuration for static files.
 """
 
 import os
+import sys
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
+TESTING = "PYTEST_VERSION" in os.environ or "pytest" in sys.argv[0]
 
 SECRET_KEY = os.environ.get(
     "DJANGO_SECRET_KEY",
     "django-insecure-change-me-in-production",
 )
-
-DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
+# `manage.py check --deploy` (run in CI) surfaces an insecure SECRET_KEY as
+# W009, so the deploy gate already catches it without a runtime raise here.
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -23,6 +27,12 @@ ALLOWED_HOSTS = [
     ".vercel.app",
     "ether-llc.com",
     "www.ether-llc.com",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://ether-llc.com",
+    "https://www.ether-llc.com",
+    "https://*.vercel.app",
 ]
 
 INSTALLED_APPS = [
@@ -87,3 +97,44 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [BASE_DIR / "ether" / "static"]
+
+
+# Production hardening: enabled when DEBUG is off (i.e. on Vercel) and we're
+# not in a pytest run. The test client cannot follow SECURE_SSL_REDIRECT.
+if not DEBUG and not TESTING:
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 60 * 60 * 24 * 365
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+    X_FRAME_OPTIONS = "DENY"
+    SESSION_COOKIE_HTTPONLY = True
+    SESSION_COOKIE_SAMESITE = "Lax"
+    CSRF_COOKIE_HTTPONLY = True
+    CSRF_COOKIE_SAMESITE = "Lax"
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {name} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+    },
+    "root": {"handlers": ["console"], "level": "INFO"},
+    "loggers": {
+        "django.security": {"level": "WARNING", "propagate": True},
+        "django.request": {"level": "WARNING", "propagate": True},
+    },
+}
