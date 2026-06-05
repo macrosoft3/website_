@@ -15,15 +15,15 @@ classifiers = [
   "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
-  "django>=6.0.5",
+  "django>=6.0.6",
 ]
 
 [dependency-groups]
 dev = [
-  "djlint==1.36.4",
+  "djlint==1.38.2",
   "pytest==9.0.3",
   "pytest-django==4.12",
-  "ruff==0.15.12",
+  "ruff==0.15.16",
 ]
 
 [tool.ruff]
