@@ -1,11 +1,18 @@
 name: CI
 
+# Enable Buildkit and let compose use it to speed up image building
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
 on:
   pull_request:
     branches: ['main']
+    paths-ignore: ['docs/**']
 
   push:
     branches: ['main']
+    paths-ignore: ['docs/**']
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
@@ -15,73 +22,55 @@ jobs:
   linter:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Code Repository
         uses: actions/checkout@v6
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version-file: '.python-version'
-
+      # Consider using pre-commit.ci for open source project
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
 
-  django:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version-file: '.python-version'
-
-      - name: Install dependencies
-        run: uv sync --frozen
-
-      - name: Django system check
-        env:
-          DJANGO_SECRET_KEY: ci-secret-key
-        run: uv run python manage.py check
-
-      - name: Run migrations
-        env:
-          DJANGO_SECRET_KEY: ci-secret-key
-        run: uv run python manage.py migrate --run-syncdb
-
-      - name: Collectstatic
-        env:
-          DJANGO_SECRET_KEY: ci-secret-key
-        run: uv run python manage.py collectstatic --noinput
-
+  # With no caching at all the entire ci process takes 3m to complete!
   pytest:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:18
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_PASSWORD: postgres
+
+    env:
+      # postgres://user:password@host:port/database
+      DATABASE_URL: 'postgres://postgres:postgres@localhost:5432/postgres'
+
     steps:
-      - name: Checkout
+      - name: Checkout Code Repository
         uses: actions/checkout@v6
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v5
         with:
-          enable-cache: true
+          enable-cache: "true"
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version-file: '.python-version'
+          python-version-file: ".python-version"
 
       - name: Install dependencies
-        run: uv sync --frozen
+        run: uv sync --locked
 
-      - name: Run pytest
-        env:
-          DJANGO_SECRET_KEY: ci-secret-key
-        run: uv run pytest -q
+      - name: Check DB Migrations
+        run: uv run python manage.py makemigrations --check
+
+      - name: Run DB Migrations
+        run: uv run python manage.py migrate
+
+      - name: Test with pytest
+        run: uv run pytest
