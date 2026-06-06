@@ -1,20 +1,5 @@
 /* Ether website. Inspired by Digital Agency (デジタル庁) design system. */
 
-/* Inter (Latin) self-hosted, variable weight. JP glyphs fall through to the
-   native stack below. License: ether/static/fonts/Inter-OFL.txt (SIL OFL 1.1). */
-@font-face {
-  font-family: "InterVariable";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2");
-  /* Latin only; let Japanese fall through to Hiragino / Noto Sans JP. */
-  unicode-range:
-    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
 :root {
   --text: #1a1a1c;
   --text-strong: #0c0c0e;
@@ -41,12 +26,12 @@
   --shadow-soft: none;
   --focus-ring: #ffcc00;
   --max-width: 1200px;
-  /* Latin glyphs resolve to Inter; Japanese glyphs fall through to the
-     native faces (Hiragino on Apple, Noto Sans JP / Yu Gothic elsewhere). */
+  /* ⚡ Bolt: Use system fonts to avoid loading ~48KB Inter font and eliminate a blocking request.
+     Prioritizes high-quality native faces for both Latin and Japanese glyphs. */
   --font-sans:
-    "InterVariable", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-    "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, Arial, sans-serif;
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic",
+    "Meiryo", system-ui, Arial, sans-serif;
 }
 
 *,
