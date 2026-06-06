@@ -14,12 +14,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
 TESTING = "PYTEST_VERSION" in os.environ or "pytest" in sys.argv[0]
 
-SECRET_KEY = os.environ.get(
-    "DJANGO_SECRET_KEY",
-    "django-insecure-change-me-in-production",
-)
-# `manage.py check --deploy` (run in CI) surfaces an insecure SECRET_KEY as
-# W009, so the deploy gate already catches it without a runtime raise here.
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+if not DEBUG and not TESTING and not SECRET_KEY:
+    msg = "DJANGO_SECRET_KEY must be set in production (when DEBUG=0)"
+    raise RuntimeError(msg)
+
+if not SECRET_KEY:
+    SECRET_KEY = "django-insecure-change-me-in-production"  # noqa: S105
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
