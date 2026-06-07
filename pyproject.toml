@@ -20,7 +20,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-  "djlint==1.38.2",
+  "djlint==1.39.0",
   "pytest==9.0.3",
   "pytest-django==4.12",
   "ruff==0.15.16",
