@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "django.middleware.csp.ContentSecurityPolicyMiddleware",
     # ⚡ Bolt: Compress responses to reduce bandwidth and improve load times.
     "django.middleware.gzip.GZipMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -72,6 +73,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "django.template.context_processors.csp",
             ],
         },
     },
@@ -121,6 +123,19 @@ if not DEBUG and not TESTING:
     SESSION_COOKIE_SAMESITE = "Lax"
     CSRF_COOKIE_HTTPONLY = True
     CSRF_COOKIE_SAMESITE = "Lax"
+
+    SECURE_CSP = {
+        "default-src": ["'self'"],
+        "script-src": ["'self'"],
+        "style-src": ["'self'"],
+        "img-src": ["'self'", "data:"],
+        "font-src": ["'self'"],
+        "connect-src": ["'self'"],
+        "base-uri": ["'self'"],
+        "form-action": ["'self'"],
+        "frame-ancestors": ["'none'"],
+        "upgrade-insecure-requests": True,
+    }
 
 LOGGING = {
     "version": 1,
