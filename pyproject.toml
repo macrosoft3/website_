@@ -1,3 +1,7 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=77", "wheel" ]
+
 [project]
 name = "ether"
 version = "0.1.0"
@@ -18,13 +22,6 @@ dependencies = [
   "django>=6.0.6",
 ]
 
-[build-system]
-requires = [ "setuptools>=77", "wheel" ]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools.packages.find]
-include = [ "config", "ether" ]
-
 [dependency-groups]
 dev = [
   "djlint==1.38.2",
@@ -32,6 +29,9 @@ dev = [
   "pytest-django==4.12",
   "ruff==0.15.16",
 ]
+
+[tool.setuptools]
+packages.find.include = [ "config", "ether" ]
 
 [tool.ruff]
 extend-exclude = [
