@@ -1,25 +1,27 @@
-# Ether合同会社 ウェブサイト
+# Ether LLC — Website
 
-[English README](README.en.md)
+[日本語版](README.ja.md)
 
-## このプロジェクトについて
+[Japanese README](README.md)
 
-Ether合同会社の組織サイト (`https://ether-llc.com`) のリポジトリです。日本語と英語の2言語対応の静的風サイトで、Django のテンプレート描画と Python Runtime (Vercel) でホストされます。
+## What this project is
 
-## 利用シーン
+This repository hosts the Ether LLC organization website (`https://ether-llc.com`). It is a bilingual Japanese/English site served with Django template rendering on a Python Runtime (Vercel).
 
-- 会社概要・事業目的・プライバシーポリシー等の公開情報を2言語で提供するために使われます。
-- 組織方針（ビジョン、Ethereum 保有方針）やプロダクト紹介（GratefulMoments）を同一リポジトリで管理しています。
-- readme は本リポジトリのドキュメント群の一部です（詳細は [`pyproject.toml`](pyproject.toml) を参照）。
+## Why it's useful
 
-## はじめ方 (macOS)
+- Provides public organizational information in two languages from a single codebase: vision, company policy, business objectives, and legal pages (privacy / cookies).
+- Manages both the corporate overview and product descriptions (e.g., GratefulMoments) in one repository.
+- This README is one of the repo docs; additional metadata is in [`pyproject.toml`](pyproject.toml).
 
-必要な環境:
+## Getting started (macOS)
 
-- Python 3.12 以上（3.12 / 3.13 / 3.14 をサポートしています）
+Prerequisites:
+
+- Python 3.12 or later (3.12 / 3.13 / 3.14 supported)
 - `uv`
 
-セットアップ手順:
+Setup:
 
 ```bash
 uv sync
@@ -27,29 +29,29 @@ uv run python manage.py migrate
 uv run python manage.py runserver
 ```
 
-`http://localhost:8000/` にて日本語版、`http://localhost:8000/en/` にて英語版を確認できます。
+Open `http://localhost:8000/` for the Japanese site and `http://localhost:8000/en/` for the English site.
 
-## テスト / ヘルプ
+## Tests and help
 
--  Smoke テスト: [`tests/test_pages.py`](tests/test_pages.py)
-- テスト実行:
+- Smoke tests: [`tests/test_pages.py`](tests/test_pages.py)
+- Run tests:
 
 ```bash
 uv run pytest
 ```
 
-- Lint / Format:
+- Lint / format:
 
 ```bash
 uv run ruff check .            # Python
-uv run djlint ether/templates/ # Django テンプレート
+uv run djlint ether/templates/ # Django templates
 uv run djlint ether/templates/ --reformat
 ```
 
-不明点は上記テストファイル [`tests/test_pages.py`](tests/test_pages.py) や [`pyproject.toml`](pyproject.toml) を確認してください。
+For questions, check [`tests/test_pages.py`](tests/test_pages.py) and [`pyproject.toml`](pyproject.toml) for project configuration.
 
-## 保守・コントリビューション
+## Maintainers and contributing
 
-保守: Ether LLC ([so.masuda.2003@ether-llc.com](mailto:so.masuda.2003@ether-llc.com))
+Maintained by Ether LLC ([so.masuda.2003@ether-llc.com](mailto:so.masuda.2003@ether-llc.com))
 
-本リポジトリはオープンソースライセンスではありません。コントリビューションの受付可否は保守者に確認してください。
+This project is not open source. Confirm with maintainers before contributing.

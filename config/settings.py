@@ -15,12 +15,14 @@ DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
 TESTING = "PYTEST_VERSION" in os.environ or "pytest" in sys.argv[0]
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
-if not DEBUG and not TESTING and not SECRET_KEY:
+VERCEL_ENV = os.environ.get("VERCEL_ENV", "")
+REQUIRES_SECRET_KEY = not DEBUG and not TESTING and VERCEL_ENV in {"", "production"}
+if REQUIRES_SECRET_KEY and not SECRET_KEY:
     msg = "DJANGO_SECRET_KEY must be set in production (when DEBUG=0)"
     raise RuntimeError(msg)
 
 if not SECRET_KEY:
-    SECRET_KEY = "django-insecure-change-me-in-production"  # noqa: S105
+    SECRET_KEY = "django-insecure-preview-build-secret"  # noqa: S105
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
