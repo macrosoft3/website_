@@ -57,7 +57,7 @@
           content="{% if lang == 'en' %}Ether LLC{% else %}Ether合同会社{% endif %}" />
     <meta name="twitter:description"
           content="{% if lang == 'en' %}Ethereum holdings, software development, and related cultural projects from Tokyo.{% else %}Ethereum保有、ソフトウェア開発、関連する文化事業を行う東京の会社です。{% endif %}" />
-    <script type="application/ld+json">
+    <script type="application/ld+json" nonce="{{ csp_nonce }}">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
