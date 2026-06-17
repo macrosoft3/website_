@@ -179,7 +179,8 @@
             {% if alt_lang_url %}
               <li>
                 <a href="{{ alt_lang_url }}"
-                   hreflang="{% if lang == 'en' %}ja{% else %}en{% endif %}">
+                   hreflang="{% if lang == 'en' %}ja{% else %}en{% endif %}"
+                   aria-label="{% if lang == 'en' %}Switch to Japanese{% else %}Englishに切り替え{% endif %}">
                   {% if lang == 'en' %}
                     日本語
                   {% else %}
@@ -192,7 +193,7 @@
         </nav>
       </div>
     </header>
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
       <div class="container">
         {% block breadcrumb %}
         {% endblock breadcrumb %}
