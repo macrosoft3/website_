@@ -277,6 +277,8 @@ ether/media/
 .env
 .envs/*
 !.envs/.local/
+.envs/.local/*
+!.envs/.local/*.example
 
 # Django
 db.sqlite3

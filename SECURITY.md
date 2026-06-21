@@ -16,8 +16,15 @@ Do not open a public issue for secrets, private keys, personal data exposure, or
 ## Secrets And Sensitive Data
 
 - Never commit API keys, App Store credentials, deployment tokens, `.env` files, local databases, or machine-specific editor state.
+- Keep real local environment files under `.envs/.local/` untracked. Commit only `*.example` templates.
 - Rotate credentials immediately if they are exposed.
 - Prefer GitHub Dependabot, secret scanning, and low-permission Actions over broad third-party access.
+
+## Secret Scanning And Push Protection
+
+Repository administrators should keep GitHub Secret Scanning and Push Protection enabled for this public repository. Before pushing credential-hygiene work, verify the settings in GitHub under **Settings -> Code security and analysis**.
+
+If a real credential was ever committed, removing the file from the current tree is not enough. Rotate the affected credential first, then plan any history rewrite separately with explicit maintainer approval.
 
 ## Disclosure
 

@@ -29,6 +29,18 @@ uv run python manage.py runserver
 
 Open `http://localhost:8000/` for the Japanese site and `http://localhost:8000/en/` for the English site.
 
+## Local environment files
+
+Real local environment files are private machine state and must not be committed.
+Use the templates in `.envs/.local/*.example` when a local environment file is needed:
+
+```bash
+cp .envs/.local/.django.example .envs/.local/.django
+cp .envs/.local/.postgres.example .envs/.local/.postgres
+```
+
+Replace placeholder values only in the untracked local copies. Vercel deployment secrets such as `DJANGO_SECRET_KEY` must be configured in Vercel or GitHub secret storage, not in this repository.
+
 ## Tests and help
 
 - Smoke tests: [`tests/test_pages.py`](tests/test_pages.py)

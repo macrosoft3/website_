@@ -1,0 +1,8 @@
+# Local PostgreSQL settings template.
+# Copy to .envs/.local/.postgres and replace placeholders locally.
+
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=website_local
+POSTGRES_USER=website_local
+POSTGRES_PASSWORD=replace-with-a-local-only-password

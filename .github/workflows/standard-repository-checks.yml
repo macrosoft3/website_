@@ -24,8 +24,10 @@ jobs:
       - name: Banned artifacts
         run: |
           set -eu
-          banned='(^|/)(\.DS_Store|Thumbs\.db|memory\.db|\.env)$'
-          if find . -path ./.git -prune -o -type f -print | grep -E "$banned"; then
+          banned='(^|/)(\.DS_Store|Thumbs\.db|memory\.db|\.env)$|^\./\.envs/\.local/'
+          banned_files="$(git ls-files | sed 's#^#./#' | grep -E "$banned" | grep -Ev '\.example$' || true)"
+          if [ -n "$banned_files" ]; then
+            printf '%s\n' "$banned_files"
             echo "Banned generated, local, or secret-bearing artifact found."
             exit 1
           fi

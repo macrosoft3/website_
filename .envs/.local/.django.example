@@ -1,0 +1,5 @@
+# Local Django settings template.
+# Copy to .envs/.local/.django and replace placeholders locally.
+
+DJANGO_DEBUG=1
+DJANGO_SECRET_KEY=replace-with-a-local-only-secret
