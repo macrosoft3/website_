@@ -53,3 +53,7 @@ uv run djlint ether/templates/ --reformat
 保守: Ether LLC ([so.masuda.2003@ether-llc.com](mailto:so.masuda.2003@ether-llc.com))
 
 本リポジトリはオープンソースライセンスではありません。コントリビューションの受付可否は保守者に確認してください。
+
+## ライセンス
+
+© 2026 Ether LLC. All rights reserved. 本リポジトリは参照目的で公開しており、再利用・改変・再配布を許諾していません。利用の際は保守者にご確認ください。

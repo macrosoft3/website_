@@ -1,5 +1,7 @@
 # Ether LLC — Website
 
+[日本語版](README.ja.md)
+
 [Japanese README](README.md)
 
 ## What this project is
@@ -65,3 +67,7 @@ For questions, check [`tests/test_pages.py`](tests/test_pages.py) and [`pyprojec
 Maintained by Ether LLC ([so.masuda.2003@ether-llc.com](mailto:so.masuda.2003@ether-llc.com))
 
 This project is not open source. Confirm with maintainers before contributing.
+
+## License
+
+© 2026 Ether LLC. All rights reserved. This repository is published for reference only and is not licensed for reuse, modification, or redistribution. Contact the maintainers before using any part of it.
