@@ -1,9 +1,5 @@
 # Ether LLC — Website
 
-[日本語版](README.ja.md)
-
-[Japanese README](README.md)
-
 ## Overview
 
 This repository hosts the Ether LLC organization website (`https://ether-llc.com`). It is a bilingual Japanese/English site served with Django template rendering on a Python Runtime (Vercel).
