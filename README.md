@@ -4,7 +4,7 @@
 
 [Japanese README](README.md)
 
-## What this project is
+## Overview
 
 This repository hosts the Ether LLC organization website (`https://ether-llc.com`). It is a bilingual Japanese/English site served with Django template rendering on a Python Runtime (Vercel).
 
@@ -14,7 +14,7 @@ This repository hosts the Ether LLC organization website (`https://ether-llc.com
 - Manages both the corporate overview and product descriptions (e.g., GratefulMoments) in one repository.
 - This README is one of the repo docs; additional metadata is in [`pyproject.toml`](pyproject.toml).
 
-## Getting started (macOS)
+## Quickstart
 
 Prerequisites:
 
@@ -61,6 +61,16 @@ uv run djlint ether/templates/ --reformat
 ```
 
 For questions, check [`tests/test_pages.py`](tests/test_pages.py) and [`pyproject.toml`](pyproject.toml) for project configuration.
+
+## Status
+
+Website content and deployment checks are maintained for the Ether LLC public site.
+
+## Development
+
+Keep changes focused, document configuration changes, and avoid committing generated or local-only artifacts.
+
+## Support
 
 ## Maintainers and contributing
 

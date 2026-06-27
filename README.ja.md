@@ -2,7 +2,7 @@
 
 [English README](README.en.md)
 
-## このプロジェクトについて
+## Overview
 
 Ether合同会社の組織サイト (`https://ether-llc.com`) のリポジトリです。日本語と英語の2言語対応の静的風サイトで、Django のテンプレート描画と Python Runtime (Vercel) でホストされます。
 
@@ -12,7 +12,7 @@ Ether合同会社の組織サイト (`https://ether-llc.com`) のリポジトリ
 - 組織方針（ビジョン、Ethereum 保有方針）やプロダクト紹介（GratefulMoments）を同一リポジトリで管理しています。
 - readme は本リポジトリのドキュメント群の一部です（詳細は [`pyproject.toml`](pyproject.toml) を参照）。
 
-## はじめ方 (macOS)
+## Quickstart
 
 必要な環境:
 

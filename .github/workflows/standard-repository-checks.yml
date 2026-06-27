@@ -21,10 +21,16 @@ jobs:
           test -f CONTRIBUTING.md
           test -f SECURITY.md
           test -f .github/pull_request_template.md
+      - name: README structure
+        run: |
+          set -eu
+          for heading in '## Overview' '## Status' '## Quickstart' '## Development' '## Support' '## License'; do
+            grep -Fq "$heading" README.md
+          done
       - name: Banned artifacts
         run: |
           set -eu
-          banned='(^|/)(\.DS_Store|Thumbs\.db|memory\.db|\.env)$|^\./\.envs/\.local/'
+          banned='(^|/)(\.DS_Store|Thumbs\.db|memory\.db|\.env|\.env\..+|\.pytest_cache|\.ruff_cache|\.uv-cache|\.uv-python|\.venv|__pycache__|\.build|\.swiftpm|dist|build|node_modules)$|^\./\.envs/\.local/'
           banned_files="$(git ls-files | sed 's#^#./#' | grep -E "$banned" | grep -Ev '\.example$' || true)"
           if [ -n "$banned_files" ]; then
             printf '%s\n' "$banned_files"
@@ -36,4 +42,10 @@ jobs:
           set -eu
           if [ -f README.ja.md ]; then
             grep -Eq 'README\.ja\.md|日本語' README.md
+          fi
+      - name: Documentation naming
+        run: |
+          set -eu
+          if [ -d docs ]; then
+            test ! -d Docs
           fi
