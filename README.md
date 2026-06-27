@@ -70,7 +70,9 @@ Website content and deployment checks are maintained for the Ether LLC public si
 
 Keep changes focused, document configuration changes, and avoid committing generated or local-only artifacts.
 
-## Support
+## Where to get help
+
+Questions about the site, content changes, or deployments can be directed to the maintainers at [so.masuda.2003@ether-llc.com](mailto:so.masuda.2003@ether-llc.com). For repository-specific workflow expectations, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Maintainers and contributing
 
