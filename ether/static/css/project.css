@@ -62,6 +62,43 @@ img {
   max-width: 100%;
 }
 
+.app-screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.app-screenshot-gallery figure {
+  margin: 0;
+}
+
+.app-screenshot-gallery img {
+  width: 100%;
+  height: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+}
+
+.app-screenshot-gallery figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.app-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.app-link-list li {
+  margin: 0;
+}
+
 a {
   color: var(--link);
   text-decoration: underline;
@@ -87,6 +124,22 @@ a:hover {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
+}
+
+@media (max-width: 720px) {
+  .app-screenshot-gallery {
+    display: flex;
+    gap: 16px;
+    margin-inline: -24px;
+    padding-inline: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .app-screenshot-gallery figure {
+    flex: 0 0 min(76vw, 300px);
+    scroll-snap-align: center;
+  }
 }
 
 .skip-link {

@@ -27,6 +27,36 @@ urlpatterns = [
         name="software",
     ),
     path(
+        "software/grateful-moments/",
+        _page(
+            "pages/software/grateful_moments.html",
+            "ja",
+            "software",
+            "/en/software/grateful-moments/",
+        ),
+        name="grateful_moments",
+    ),
+    path(
+        "software/grateful-moments/support/",
+        _page(
+            "pages/software/grateful_moments/support.html",
+            "ja",
+            "software",
+            "/en/software/grateful-moments/support/",
+        ),
+        name="grateful_moments_support",
+    ),
+    path(
+        "software/grateful-moments/privacy/",
+        _page(
+            "pages/software/grateful_moments/privacy.html",
+            "ja",
+            "software",
+            "/en/software/grateful-moments/privacy/",
+        ),
+        name="grateful_moments_privacy",
+    ),
+    path(
         "holdings/",
         _page("pages/holdings.html", "ja", "holdings", "/en/holdings/"),
         name="holdings",
@@ -66,6 +96,36 @@ urlpatterns = [
         "en/software/",
         _page("pages/en/software.html", "en", "software", "/software/"),
         name="software_en",
+    ),
+    path(
+        "en/software/grateful-moments/",
+        _page(
+            "pages/en/software/grateful_moments.html",
+            "en",
+            "software",
+            "/software/grateful-moments/",
+        ),
+        name="grateful_moments_en",
+    ),
+    path(
+        "en/software/grateful-moments/support/",
+        _page(
+            "pages/en/software/grateful_moments/support.html",
+            "en",
+            "software",
+            "/software/grateful-moments/support/",
+        ),
+        name="grateful_moments_support_en",
+    ),
+    path(
+        "en/software/grateful-moments/privacy/",
+        _page(
+            "pages/en/software/grateful_moments/privacy.html",
+            "en",
+            "software",
+            "/software/grateful-moments/privacy/",
+        ),
+        name="grateful_moments_privacy_en",
     ),
     path(
         "en/holdings/",

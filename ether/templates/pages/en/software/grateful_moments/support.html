@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Support | Small Thanks Diary
+{% endblock title %}
+{% block meta_description %}
+  Support contact details and information to include when requesting help with Small Thanks Diary.
+{% endblock meta_description %}
+{% block og_title %}
+  Support | Small Thanks Diary
+{% endblock og_title %}
+{% block og_description %}
+  Support for Small Thanks Diary app issues, general feedback, and feature requests.
+{% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="Small Thanks Diary Support" %}
+{% endblock breadcrumb %}
+{% block content %}
+  <section>
+    <p><a href="/en/software/grateful-moments/">Small Thanks Diary</a></p>
+    <h1>Support</h1>
+    <p class="lead">For app issues, general feedback, or feature requests, contact support by email.</p>
+  </section>
+  <section aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <p>
+      Email:
+      <a href="mailto:so.masuda.2003@pm.me?subject=Small%20Thanks%20Diary%20Support">so.masuda.2003@pm.me</a>
+    </p>
+    <p>
+      You can also open an issue on GitHub:
+      <a href="https://github.com/masuda-so/GratefulMoments/issues"
+         rel="noopener noreferrer"
+         target="_blank">GratefulMoments Issues</a>.
+    </p>
+  </section>
+  <section aria-labelledby="before-contact">
+    <h2 id="before-contact">Before contacting support</h2>
+    <p>Please include your app version, iOS version, device model, what you expected to happen, and what happened instead.</p>
+    <p>Do not include private journal entries, photos, passwords, payment details, or other sensitive information in support messages.</p>
+  </section>
+  <section aria-labelledby="premium">
+    <h2 id="premium">Premium</h2>
+    <p>
+      Premium subscriptions are handled by Apple through the App Store. Purchases can be restored from the Premium screen
+      in the app. The developer cannot view or manage your Apple ID payment method.
+    </p>
+  </section>
+  <section>
+    <h2>Privacy Policy</h2>
+    <p><a href="/en/software/grateful-moments/privacy/">Read the Privacy Policy</a>.</p>
+  </section>
+{% endblock content %}

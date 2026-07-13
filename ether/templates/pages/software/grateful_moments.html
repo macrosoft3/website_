@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+  小さなありがとう日記 | Ether合同会社
+{% endblock title %}
+{% block meta_description %}
+  小さなありがとう日記は、日々の感謝をメモや写真で記録し、端末内で大切に保管できるiOSアプリです。
+{% endblock meta_description %}
+{% block og_title %}
+  小さなありがとう日記
+{% endblock og_title %}
+{% block og_description %}
+  日々の小さな感謝を、メモや写真とともに端末内へ記録するプライベートな日記アプリです。
+{% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="小さなありがとう日記" %}
+{% endblock breadcrumb %}
+{% block content %}
+  <section>
+    <p class="meta-label">GRATEFULMOMENTS</p>
+    <h1>小さなありがとう日記</h1>
+    <p class="lead">
+      日々の小さな感謝を、メモや写真とともに記録するためのプライベートな日記アプリです。
+      ストリークと達成バッジで習慣を見える形にし、思い出は端末内に保管します。
+    </p>
+  </section>
+  <section aria-labelledby="screenshots">
+    <h2 id="screenshots">アプリ画面</h2>
+    <div class="app-screenshot-gallery">
+      <figure>
+        <img src="{% static 'images/apps/grateful-moments/01-moments-iphone-17-pro-max.png' %}"
+             width="1320"
+             height="2868"
+             alt="小さなありがとう日記のモーメント一覧画面" />
+        <figcaption>モーメント</figcaption>
+      </figure>
+      <figure>
+        <img src="{% static 'images/apps/grateful-moments/02-achievements-iphone-17-pro-max.png' %}"
+             width="1320"
+             height="2868"
+             alt="小さなありがとう日記の達成状況画面" />
+        <figcaption>達成状況</figcaption>
+      </figure>
+      <figure>
+        <img src="{% static 'images/apps/grateful-moments/03-entry-iphone-17-pro-max.png' %}"
+             width="1320"
+             height="2868"
+             alt="小さなありがとう日記の記録入力画面" />
+        <figcaption>記録</figcaption>
+      </figure>
+    </div>
+    <p class="muted">iPhone 17 Pro Max、iOS 26.4で撮影した画面です。</p>
+  </section>
+  <section aria-labelledby="features">
+    <h2 id="features">大切にしていること</h2>
+    <div class="product-grid">
+      <article class="product-card">
+        <h3>気軽に記録</h3>
+        <p>覚えておきたい日常の出来事を、タイトル、メモ、写真とともに残せます。</p>
+      </article>
+      <article class="product-card">
+        <h3>習慣を育てる</h3>
+        <p>ストリークと達成バッジが、感謝を記録する習慣をやさしく支えます。</p>
+      </article>
+      <article class="product-card">
+        <h3>自分で管理</h3>
+        <p>記録は端末内に保管されます。広告はなく、PDF・CSVへの書き出しは自分で選んだときだけ行われます。</p>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="app-information">
+    <h2 id="app-information">ご案内</h2>
+    <ul class="app-link-list">
+      <li><a href="/software/grateful-moments/support/">サポート</a></li>
+      <li><a href="/software/grateful-moments/privacy/">プライバシーポリシー</a></li>
+      <li>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+           rel="noopener noreferrer"
+           target="_blank">利用規約（Apple標準EULA）</a>
+      </li>
+    </ul>
+  </section>
+{% endblock content %}
