@@ -30,6 +30,27 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/software/" />
   </url>
   <url>
+    <loc>https://ether-llc.com/software/grateful-moments/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/software/grateful-moments/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/software/grateful-moments/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/software/grateful-moments/support/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/software/grateful-moments/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/software/grateful-moments/support/" />
+  </url>
+  <url>
+    <loc>https://ether-llc.com/software/grateful-moments/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ether-llc.com/software/grateful-moments/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ether-llc.com/en/software/grateful-moments/privacy/" />
+  </url>
+  <url>
     <loc>https://ether-llc.com/business/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>

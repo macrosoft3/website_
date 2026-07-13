@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+  Small Thanks Diary | Ether LLC
+{% endblock title %}
+{% block meta_description %}
+  Small Thanks Diary is a private iOS gratitude journal for notes, photos, streaks, and badges, with memories stored on your device.
+{% endblock meta_description %}
+{% block og_title %}
+  Small Thanks Diary
+{% endblock og_title %}
+{% block og_description %}
+  A private gratitude journal for recording small everyday moments with notes and photos on your device.
+{% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="Small Thanks Diary" %}
+{% endblock breadcrumb %}
+{% block content %}
+  <section>
+    <p class="meta-label">GRATEFULMOMENTS</p>
+    <h1>Small Thanks Diary</h1>
+    <p class="lead">
+      A private gratitude journal for small everyday moments. Capture notes and photos, build a steady habit with streaks
+      and achievement badges, and keep your memories on your device.
+    </p>
+  </section>
+  <section aria-labelledby="screenshots">
+    <h2 id="screenshots">App screens</h2>
+    <div class="app-screenshot-gallery">
+      <figure>
+        <img src="{% static 'images/apps/grateful-moments/01-moments-iphone-17-pro-max.png' %}"
+             width="1320"
+             height="2868"
+             alt="Small Thanks Diary moments screen" />
+        <figcaption>Moments</figcaption>
+      </figure>
+      <figure>
+        <img src="{% static 'images/apps/grateful-moments/02-achievements-iphone-17-pro-max.png' %}"
+             width="1320"
+             height="2868"
+             alt="Small Thanks Diary achievements screen" />
+        <figcaption>Achievements</figcaption>
+      </figure>
+      <figure>
+        <img src="{% static 'images/apps/grateful-moments/03-entry-iphone-17-pro-max.png' %}"
+             width="1320"
+             height="2868"
+             alt="Small Thanks Diary entry screen" />
+        <figcaption>Entry</figcaption>
+      </figure>
+    </div>
+    <p class="muted">Screenshots captured on iPhone 17 Pro Max with iOS 26.4.</p>
+  </section>
+  <section aria-labelledby="features">
+    <h2 id="features">App highlights</h2>
+    <div class="product-grid">
+      <article class="product-card">
+        <h3>Record gently</h3>
+        <p>Save titles, notes, and photos for the everyday moments you want to remember.</p>
+      </article>
+      <article class="product-card">
+        <h3>Grow the habit</h3>
+        <p>Streaks and achievement badges help make gratitude a visible, encouraging routine.</p>
+      </article>
+      <article class="product-card">
+        <h3>Stay in control</h3>
+        <p>Your entries stay on your device. There are no ads, and exports happen only when you choose PDF or CSV.</p>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="app-information">
+    <h2 id="app-information">Information</h2>
+    <ul class="app-link-list">
+      <li><a href="/en/software/grateful-moments/support/">Support</a></li>
+      <li><a href="/en/software/grateful-moments/privacy/">Privacy Policy</a></li>
+      <li>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+           rel="noopener noreferrer"
+           target="_blank">Terms of Use (Apple standard EULA)</a>
+      </li>
+    </ul>
+  </section>
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+  サポート | 小さなありがとう日記
+{% endblock title %}
+{% block meta_description %}
+  小さなありがとう日記のサポート窓口と、お問い合わせ前にご確認いただきたい情報です。
+{% endblock meta_description %}
+{% block og_title %}
+  サポート | 小さなありがとう日記
+{% endblock og_title %}
+{% block og_description %}
+  小さなありがとう日記の不具合、フィードバック、機能要望を受け付けるサポートページです。
+{% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="小さなありがとう日記 サポート" %}
+{% endblock breadcrumb %}
+{% block content %}
+  <section>
+    <p><a href="/software/grateful-moments/">小さなありがとう日記</a></p>
+    <h1>サポート</h1>
+    <p class="lead">不具合、一般的なフィードバック、機能のご要望はメールでお知らせください。</p>
+  </section>
+  <section aria-labelledby="contact">
+    <h2 id="contact">お問い合わせ</h2>
+    <p>
+      メール:
+      <a href="mailto:so.masuda.2003@pm.me?subject=Small%20Thanks%20Diary%20Support">so.masuda.2003@pm.me</a>
+    </p>
+    <p>
+      GitHubでも不具合を報告できます:
+      <a href="https://github.com/masuda-so/GratefulMoments/issues"
+         rel="noopener noreferrer"
+         target="_blank">GratefulMoments Issues</a>
+    </p>
+  </section>
+  <section aria-labelledby="before-contact">
+    <h2 id="before-contact">お問い合わせ前に</h2>
+    <p>アプリのバージョン、iOSのバージョン、端末の機種、期待していた動作、実際に起きたことをお知らせください。</p>
+    <p>日記の本文、写真、パスワード、決済情報などの機密情報は、サポートメッセージに含めないでください。</p>
+  </section>
+  <section aria-labelledby="premium">
+    <h2 id="premium">プレミアム</h2>
+    <p>
+      プレミアムのサブスクリプションは、AppleがApp Storeを通じて処理します。
+      購入内容はアプリのプレミアム画面から復元できます。開発者がお客様のApple IDの支払い方法を閲覧・管理することはできません。
+    </p>
+  </section>
+  <section>
+    <h2>プライバシーポリシー</h2>
+    <p><a href="/software/grateful-moments/privacy/">プライバシーポリシーを読む</a></p>
+  </section>
+{% endblock content %}

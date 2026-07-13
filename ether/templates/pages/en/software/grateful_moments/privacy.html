@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Privacy Policy | Small Thanks Diary
+{% endblock title %}
+{% block meta_description %}
+  How Small Thanks Diary handles journal entries, photos, purchases, exports, analytics, and advertising.
+{% endblock meta_description %}
+{% block og_title %}
+  Privacy Policy | Small Thanks Diary
+{% endblock og_title %}
+{% block og_description %}
+  How Small Thanks Diary handles your information.
+{% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="Small Thanks Diary Privacy Policy" %}
+{% endblock breadcrumb %}
+{% block content %}
+  <section>
+    <p><a href="/en/software/grateful-moments/">Small Thanks Diary</a></p>
+    <h1>Privacy Policy</h1>
+    <p>Effective date: May 7, 2026</p>
+    <p class="lead">This Privacy Policy explains how Small Thanks Diary handles your information.</p>
+  </section>
+  <section>
+    <h2>Data collection</h2>
+    <p>Small Thanks Diary does not collect personal data from the app.</p>
+    <p>
+      Your journal entries, notes, photos, streaks, badges, and app data are stored on your device. The developer does not
+      operate a server for collecting or viewing this content.
+    </p>
+  </section>
+  <section>
+    <h2>Photos</h2>
+    <p>If you add a photo to a journal entry, the photo is used only for the entry you create. Photos remain on your device as part of the app data.</p>
+  </section>
+  <section>
+    <h2>Purchases</h2>
+    <p>Premium subscriptions are processed by Apple through the App Store. The developer does not receive your payment card information.</p>
+  </section>
+  <section>
+    <h2>Export</h2>
+    <p>PDF and CSV export happens only when you choose to export your data. Exported files are created on your device and are controlled by you.</p>
+  </section>
+  <section>
+    <h2>Analytics and advertising</h2>
+    <p>Small Thanks Diary does not include third-party analytics, advertising SDKs, or tracking.</p>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <p>
+      If you have questions about this Privacy Policy or need app support, contact
+      <a href="mailto:so.masuda.2003@pm.me?subject=Small%20Thanks%20Diary%20Support">so.masuda.2003@pm.me</a>.
+    </p>
+    <p><a href="/en/software/grateful-moments/support/">Small Thanks Diary Support</a></p>
+  </section>
+{% endblock content %}

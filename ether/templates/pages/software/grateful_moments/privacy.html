@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+  プライバシーポリシー | 小さなありがとう日記
+{% endblock title %}
+{% block meta_description %}
+  小さなありがとう日記における記録、写真、購入、書き出しデータの取り扱いを説明します。
+{% endblock meta_description %}
+{% block og_title %}
+  プライバシーポリシー | 小さなありがとう日記
+{% endblock og_title %}
+{% block og_description %}
+  小さなありがとう日記におけるデータの取り扱いについて説明します。
+{% endblock og_description %}
+{% block breadcrumb %}
+  {% include "partials/_breadcrumb.html" with label="小さなありがとう日記 プライバシーポリシー" %}
+{% endblock breadcrumb %}
+{% block content %}
+  <section>
+    <p><a href="/software/grateful-moments/">小さなありがとう日記</a></p>
+    <h1>プライバシーポリシー</h1>
+    <p>施行日: 2026年5月7日</p>
+    <p class="lead">本ポリシーは、小さなありがとう日記がお客様の情報をどのように取り扱うかを説明するものです。</p>
+  </section>
+  <section>
+    <h2>データの収集</h2>
+    <p>小さなありがとう日記は、アプリから個人データを収集しません。</p>
+    <p>日記、メモ、写真、ストリーク、バッジ、その他のアプリデータは端末内に保存されます。開発者は、これらを収集または閲覧するサーバーを運営していません。</p>
+  </section>
+  <section>
+    <h2>写真</h2>
+    <p>日記に追加した写真は、お客様が作成する記録のためだけに使用され、アプリデータの一部として端末内に残ります。</p>
+  </section>
+  <section>
+    <h2>購入</h2>
+    <p>プレミアムのサブスクリプションは、AppleがApp Storeを通じて処理します。開発者がお客様の決済カード情報を受け取ることはありません。</p>
+  </section>
+  <section>
+    <h2>書き出し</h2>
+    <p>PDF・CSVへの書き出しは、お客様が操作したときだけ行われます。書き出したファイルは端末上で作成され、お客様自身が管理します。</p>
+  </section>
+  <section>
+    <h2>解析と広告</h2>
+    <p>小さなありがとう日記には、第三者の解析、広告SDK、トラッキングを組み込んでいません。</p>
+  </section>
+  <section>
+    <h2>お問い合わせ</h2>
+    <p>
+      本ポリシーに関する質問やアプリのサポートについては、
+      <a href="mailto:so.masuda.2003@pm.me?subject=Small%20Thanks%20Diary%20Support">so.masuda.2003@pm.me</a>へご連絡ください。
+    </p>
+    <p><a href="/software/grateful-moments/support/">サポートページ</a></p>
+  </section>
+{% endblock content %}
